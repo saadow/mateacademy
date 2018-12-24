@@ -15,11 +15,11 @@ public class RestaurantMenuBuilder {
 		this.beverage = builder.beverage;
 		this.price = builder.price;
 	}
-
+	
 	public static Builder builder() {
 		return new Builder();
 	}
-
+	
 	public static final class Builder {
 		private String firstCourse;
 		private String mainCourse;
