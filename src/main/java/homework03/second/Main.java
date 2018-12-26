@@ -20,11 +20,7 @@ public class Main {
 		list1.add(pl04);
 		list1.add(pl05);
 		list1.add(pl06);
-		List<PlayAllSongs> list2 = new ArrayList<PlayAllSongs>();
-		list2.add(pl03);
-		list2.add(pl04);
-		list2.add(pl05);
-		list2.add(pl06);
+		
 		for (PlaySongClass psc : list1) {
 			System.out.println(psc.getClass().getName());
 			System.out.println(psc.price);
