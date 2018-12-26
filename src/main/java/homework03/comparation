@@ -1,0 +1,7 @@
+1 Case: 2 Interfaces, 2 Abstract classes
+	Pros: No Overrides with code repeat, more agile construction
+	Cons: Can't work with objects as collection
+		
+2 Case: 1 Interface, 1 Abstract class
+	Pros: Easy to work with objects as collection, No extra interfaces and classes, more compact
+	Cons: Some code repeat in Overrides

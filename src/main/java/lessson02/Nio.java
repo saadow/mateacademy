@@ -17,7 +17,6 @@ public class Nio
 		  List <String> list = Files.lines(inPath).map(str->str.toUpperCase().replace("J", "!!!!!")).collect(Collectors.toList());
 		  Files.write(outPath, list);
 	 } catch (IOException e) {
-		 // TODO Auto-generated catch block
 		 e.printStackTrace();
 	}
   } 
