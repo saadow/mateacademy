@@ -8,5 +8,4 @@ public interface Asset {
 	void withdrawAsset();
 
 	void depositAsset();
-
 }
