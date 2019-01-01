@@ -12,9 +12,9 @@ public class Main {
 		Currency cur = new Currency(bd2);
 		SecurityPaper sp = new SecurityPaper(bd3);
 
-		Bank<Gold> bankGold = new Bank<Gold>(1, "First", "Ukraine");
-		Bank<Currency> bankCur = new Bank<Currency>(2, "Second", "USA");
-		Bank<SecurityPaper> bankSP = new Bank<SecurityPaper>(3, "Third", "Australia");
+		Bank<Gold> bankGold = new Bank<Gold>(1, "UKRSIBBANK", "Ukraine");
+		Bank<Currency> bankCur = new Bank<Currency>(2, "USBANK", "USA");
+		Bank<SecurityPaper> bankSP = new Bank<SecurityPaper>(3, "BANKAU", "Australia");
 		bankGold.setAsset(gold);
 		System.out.println(bankGold.toString());
 		bankGold.getAsset().showBalance();
