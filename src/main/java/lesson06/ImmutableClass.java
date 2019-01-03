@@ -44,7 +44,6 @@ public final class ImmutableClass {
 	public static void main (String[] args) {
 		ImmutableClass ic = new ImmutableClass("Name", "Surname", 17, "Kiev");
 		ic.getList().add("String");
-		HashMap hm = new HashMap();
 	}
 
 }
