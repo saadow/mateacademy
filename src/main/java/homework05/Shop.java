@@ -2,6 +2,7 @@ package homework05;
 
 import java.time.LocalDate;
 import java.time.temporal.ChronoUnit;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -48,7 +49,7 @@ public class Shop {
 	}
 
 	public List<Fruit> reSetPricexRealization(int percent, Type ... types) {
-		List<Fruit> newList = fruits;
+		List<Fruit> newList = new ArrayList<Fruit>(fruits);
 		for (Fruit f : newList) {
 			if ((Arrays.asList(types).contains(f.getType()))
 					&& (ChronoUnit.DAYS.between(LocalDate.now(), f.expireDate()) < 10) && (f.isExpired(LocalDate.now()) == false)) {
