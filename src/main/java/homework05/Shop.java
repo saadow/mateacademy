@@ -47,14 +47,15 @@ public class Shop {
 		return allFruitOfType(type).stream().filter(f -> f.isExpired(expDate)).collect(Collectors.toList());
 	}
 
-	public List<Fruit> reSetPricexRealization(Type ... types) {
-		for (Fruit f : fruits) {
+	public List<Fruit> reSetPricexRealization(int percent, Type ... types) {
+		List<Fruit> newList = fruits;
+		for (Fruit f : newList) {
 			if ((Arrays.asList(types).contains(f.getType()))
-					&& (ChronoUnit.DAYS.between(LocalDate.now(), f.expireDate()) < 10)) {
-				f.setPrice(f.getPrice() / 2);
+					&& (ChronoUnit.DAYS.between(LocalDate.now(), f.expireDate()) < 10) && (f.isExpired(LocalDate.now()) == false)) {
+				f.setPrice(f.getPrice() * percent / 100);
 			}
 		}
-		return fruits;
+		return newList;
 	}
 
 }

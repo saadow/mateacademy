@@ -48,7 +48,7 @@ public class Fruit {
 	@Override
 	public String toString() {
 		return "Fruit [type=" + type + ", expireDays=" + expireDays + ", arriveDate=" + arriveDate + ", price=" + price
-				+ "]";
+				+ ", country=" + type.country + "]";
 	}
 
 }
