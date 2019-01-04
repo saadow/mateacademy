@@ -23,7 +23,7 @@ public class Main {
 		System.out.println(shop.allFresh(LocalDate.now()));
 		System.out.println(shop.checkExpireDate(45));
 		shop.checkExpireDate(45).stream().map(f->f.getType().getCountry()).forEach(System.out::println);
-		System.out.println(shop.reSetPricexRealization(1));
+		System.out.println(shop.reSetPricexRealization(Type.APPLE, Type.BANANA, Type.PEAR, Type.STRAWBERRY));
 	}
 
 }

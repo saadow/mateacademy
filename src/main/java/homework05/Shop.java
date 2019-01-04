@@ -2,6 +2,7 @@ package homework05;
 
 import java.time.LocalDate;
 import java.time.temporal.ChronoUnit;
+import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -46,11 +47,11 @@ public class Shop {
 		return allFruitOfType(type).stream().filter(f -> f.isExpired(expDate)).collect(Collectors.toList());
 	}
 
-	public List<Fruit> reSetPricexRealization(int days) {
+	public List<Fruit> reSetPricexRealization(Type ... types) {
 		for (Fruit f : fruits) {
-			if ((f.getType().equals(Type.STRAWBERRY) || f.getType().equals(Type.BANANA))
-					&& (ChronoUnit.DAYS.between(f.expireDate(), LocalDate.now()) > -days) && (days > 0 && days < 10)) {
-				f.setPrice(f.getPrice() / 10 * days);
+			if ((Arrays.asList(types).contains(f.getType()))
+					&& (ChronoUnit.DAYS.between(LocalDate.now(), f.expireDate()) < 10)) {
+				f.setPrice(f.getPrice() / 2);
 			}
 		}
 		return fruits;
