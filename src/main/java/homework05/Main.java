@@ -2,7 +2,6 @@ package homework05;
 
 import java.time.LocalDate;
 import java.time.Month;
-import java.time.temporal.ChronoUnit;
 import java.util.Arrays;
 import java.util.List;
 
@@ -24,9 +23,7 @@ public class Main {
 		System.out.println(shop.allFresh(LocalDate.now()));
 		System.out.println(shop.checkExpireDate(45));
 		shop.checkExpireDate(45).stream().map(f->f.getType().getCountry()).forEach(System.out::println);
-		shop.checkRealizationDatePrice(LocalDate.now());
-		System.out.println(list);
-		System.out.println(ChronoUnit.DAYS.between(banana1.expireDate(), LocalDate.now()));
+		System.out.println(shop.reSetPricexRealization(1));
 	}
 
 }

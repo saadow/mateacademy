@@ -46,13 +46,14 @@ public class Shop {
 		return allFruitOfType(type).stream().filter(f -> f.isExpired(expDate)).collect(Collectors.toList());
 	}
 
-	public void checkRealizationDatePrice(LocalDate checkDate) {
+	public List<Fruit> reSetPricexRealization(int days) {
 		for (Fruit f : fruits) {
 			if ((f.getType().equals(Type.STRAWBERRY) || f.getType().equals(Type.BANANA))
-					&& (ChronoUnit.DAYS.between(f.expireDate(), checkDate) > -10)) {
-				f.setPrice(f.getPrice()/2);
+					&& (ChronoUnit.DAYS.between(f.expireDate(), LocalDate.now()) > -days) && (days > 0 && days < 10)) {
+				f.setPrice(f.getPrice() / 10 * days);
 			}
 		}
+		return fruits;
 	}
 
 }
