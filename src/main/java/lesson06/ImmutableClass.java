@@ -45,3 +45,4 @@ public final class ImmutableClass {
 		ImmutableClass ic = new ImmutableClass("Name", "Surname", 17, "Kiev");
 		ic.getList().add("String");
 	}
+}
