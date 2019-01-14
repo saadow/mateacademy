@@ -9,6 +9,6 @@ public class CallElevatorThreadB extends Thread{
 	}
 	public void run() {
 		elevator.call(2, 7);
-		elevator.moveTime(3, 8);
+		elevator.moveTime(elevator, 3, 8);
 	}
 }

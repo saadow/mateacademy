@@ -32,9 +32,9 @@ public class Elevator {
 	}
 
 	// Synchronized block
-	public int moveTime(int callFloor, int goFloor) {
+	public int moveTime(Elevator el, int callFloor, int goFloor) {
 		int floors = 0;
-		synchronized (this) {
+		synchronized (el) {
 			floors = Math.abs(this.floor - callFloor) + Math.abs(callFloor - goFloor);
 		}
 		System.out.println("Move time: " + floors * 3);

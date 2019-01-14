@@ -19,13 +19,11 @@ public class MainForBooks {
 		Book book11 = new Book("Farenheit 451", "Ray Bradbury");
 
 		List<Book> books = Arrays.asList(book1, book2, book3, book4, book5, book6, book7, book8, book9, book10);
-		BookCrossingLibrary lib = new BookCrossingLibrary(10);
+		BookCrossingLibrary bcl = new BookCrossingLibrary(10);
 		for (Book book : books) {
-			lib.bringBook(book);
+			bcl.bringBook(book);
 		}
-		TakeBookThread tbt = new TakeBookThread(lib);
-		BringBookThread bbt = new BringBookThread(lib);
-		tbt.run();
+		BringBookThread bbt = new BringBookThread(bcl);
 		bbt.run();
 		
 	}
