@@ -86,9 +86,14 @@ public class FruitShopUnitTest {
 
 	@Test
 	public void testAllFruitOfFruitType2() {
-		List<Fruit> expected = new ArrayList<>();
-		expected.add(strawberry);
-		assertEquals(expected, fruitShop.allFruitOfFruitType(FruitType.STRAWBERRY));
+		List<Fruit> noPearList = new ArrayList<>();
+		noPearList.add(apple1);
+		noPearList.add(strawberry);
+		noPearList.add(monkey);
+		noPearList.add(apple2);
+		FruitShop fruitShop = new FruitShop("2", noPearList);
+		List<Fruit> actual = fruitShop.allFruitOfFruitType(FruitType.PEAR);
+		assertTrue(actual.size() == 0);
 	}
 
 	@Test
@@ -102,14 +107,8 @@ public class FruitShopUnitTest {
 
 	@Test
 	public void testCheckByExpireDate2() {
-		List<Fruit> expected = new ArrayList<>();
-		expected.add(apple1);
-		expected.add(strawberry);
-		expected.add(pear);
-		expected.add(monkey);
-		expected.add(apple2);
-		List<Fruit> actual = fruitShop.checkByExpireDate(29);
-		assertEquals(expected, actual);
+		List<Fruit> actual = fruitShop.checkByExpireDate(100);
+		assertTrue(actual.size() == 0);	
 	}
 
 	@Test
@@ -131,9 +130,8 @@ public class FruitShopUnitTest {
 
 	@Test
 	public void testReSetPricexRealization() {
-		List<Fruit> expected = new ArrayList<>();
 		List<Fruit> actual = fruitShop.reSetPricexRealization(50, 14, FruitType.APPLE);
-		assertEquals(expected, actual);
+		assertFalse(actual.size() != 0);
 	}
 
 	@Test
