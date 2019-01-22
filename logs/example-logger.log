@@ -1,0 +1,16 @@
+DEBUG | 2019-01-22 21:57:33 | [main] lesson11_calc.Calculator
+			(Calculator.java:13) -- input values a=5, b=2
+INFO  | 2019-01-22 21:57:33 | [main] lesson11_calc.Calculator
+			(Calculator.java:19) -- Method div return 2
+DEBUG | 2019-01-22 21:57:33 | [main] lesson11_calc.Calculator
+			(Calculator.java:13) -- input values a=3, b=0
+ERROR | 2019-01-22 21:57:33 | [main] lesson11_calc.Calculator
+			(Calculator.java:17) -- Exception when div working / by zero
+INFO  | 2019-01-22 21:57:33 | [main] lesson11_calc.Calculator
+			(Calculator.java:19) -- Method div return -666
+DEBUG | 2019-01-22 21:57:53 | [main] lesson11_calc.Calculator (Calculator.java:13) -- input values a=5, b=2
+INFO  | 2019-01-22 21:57:53 | [main] lesson11_calc.Calculator (Calculator.java:19) -- Method div return 2
+DEBUG | 2019-01-22 21:57:53 | [main] lesson11_calc.Calculator (Calculator.java:13) -- input values a=3, b=0
+ERROR | 2019-01-22 21:57:53 | [main] lesson11_calc.Calculator (Calculator.java:17) -- Exception when div working / by zero
+INFO  | 2019-01-22 21:57:53 | [main] lesson11_calc.Calculator (Calculator.java:19) -- Method div return -666
+ERROR | 2019-01-22 21:59:12 | [main] lesson11_calc.Calculator (Calculator.java:17) -- Exception when div working / by zero

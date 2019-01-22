@@ -68,6 +68,7 @@ public class FruitShopUnitTest {
 
 	@Test
 	public void testAllFreshShouldBeNothing() {
+		
 		List<Fruit> actual = fruitShop.allFresh(LocalDate.of(2019, 11, 25));
 		assertTrue(actual.size() == 0);
 	}
