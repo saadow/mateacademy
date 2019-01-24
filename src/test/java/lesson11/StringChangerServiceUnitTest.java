@@ -37,10 +37,6 @@ public class StringChangerServiceUnitTest {
 	public void beforeAll() {
 		when(lowerUpperService.toLower("lower")).thenReturn("lower");
 		when(lowerUpperService.toUpper("UPPER")).thenReturn("UPPER");
-		//when(lowerUpperService.toUpper("end")).thenReturn("END");
-		//when(lowerUpperService.toLower("null")).thenThrow(new NullPointerException());
-		//doReturn("lower").when(lowerUpperService).toLower("lower");
-		//doReturn("UPPER").when(lowerUpperService).toUpper("UPPER");
 	}
 	
 	@Test
@@ -59,12 +55,12 @@ public class StringChangerServiceUnitTest {
 		String actual = stringChangerService.addStartAndEndUpper("UPPER", "END", "lower");
 		assertEquals(expected, actual);
 	}
-	@Test
-	public void testAddStartAndEndTotalLower() {
-		doReturn("UPPERlower").when(stringChangerService.addStart("UPPER", "lower"));
-		when(lowerUpperService.toUpper("END")).thenReturn("END");
-		when(lowerUpperService.toLower("UPPERlowerEND")).thenReturn("upperlowerend");
-		stringChangerService.addStartAndEndTotalLower("UPPER", "END", "lower");
-		verify(lowerUpperService).toLower("UPPERlowerEND");
-	}
+//	@Test
+//	public void testAddStartAndEndTotalLower() {
+//		doReturn("UPPERlower").when(stringChangerService.addStart("UPPER", "lower"));
+//		when(lowerUpperService.toUpper("END")).thenReturn("END");
+//		when(lowerUpperService.toLower("UPPERlowerEND")).thenReturn("upperlowerend");
+//		stringChangerService.addStartAndEndTotalLower("UPPER", "END", "lower");
+//		verify(lowerUpperService).toLower("UPPERlowerEND");
+//	}
 }
