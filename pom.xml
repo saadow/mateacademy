@@ -18,6 +18,9 @@
 		<disruptor.version>3.4.2</disruptor.version>
 		<javax-mail.version>1.4</javax-mail.version>
 		<smtp.version>1.4.5</smtp.version>
+		<jaxb-xjc.version>2.3.1</jaxb-xjc.version>
+		<jaxws-rt.version>2.3.1</jaxws-rt.version>
+		<jackson-databind.version>2.9.8</jackson-databind.version>
 	</properties>
 	
 	<dependencies>
@@ -51,6 +54,23 @@
 			<groupId>com.sun.mail</groupId>
 			<artifactId>smtp</artifactId>
 			<version>${smtp.version}</version>
+		</dependency>
+		<!--  For JAXB -->
+		<dependency>
+    		<groupId>com.sun.xml.bind</groupId>
+    		<artifactId>jaxb-xjc</artifactId>
+    		<version>${jaxb-xjc.version}</version>
+		</dependency>
+		<dependency>
+    		<groupId>com.sun.xml.ws</groupId>
+    		<artifactId>jaxws-rt</artifactId>
+    		<version>${jaxws-rt.version}</version>
+    		<type>pom</type>
+		</dependency>
+		<dependency>
+    		<groupId>com.fasterxml.jackson.core</groupId>
+    		<artifactId>jackson-databind</artifactId>
+    		<version>${jackson-databind.version}</version>
 		</dependency>
 	</dependencies>
 	
