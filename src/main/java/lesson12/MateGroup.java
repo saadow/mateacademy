@@ -11,15 +11,21 @@ import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlElementWrapper;
 import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonRootName;
 import com.fasterxml.jackson.annotation.JsonSubTypes;
 import com.fasterxml.jackson.annotation.JsonTypeInfo;
 import com.fasterxml.jackson.annotation.JsonTypeInfo.As;
 
-@XmlRootElement(name = "MateGroup")
+@XmlRootElement(name = "group")
 @XmlAccessorType(XmlAccessType.FIELD)
-@JsonPropertyOrder({ "room", "teacher", "students", "humanResources" })
+@XmlType(propOrder = {"id", "room", "students", "teacher", "humanResources"})
+@JsonPropertyOrder({ "id", "room", "students", "teacher", "humanResources" })
+@JsonRootName("group")
+@JsonIgnoreProperties({"id"})
 public class MateGroup implements Serializable {
 
 	@XmlElement(type = Teacher.class)
@@ -51,7 +57,6 @@ public class MateGroup implements Serializable {
 		return teacher;
 	}
 
-	@XmlElement
 	public void setTeacher(Teacher teacher) {
 		this.teacher = teacher;
 	}
@@ -85,7 +90,7 @@ public class MateGroup implements Serializable {
 		return "MateGroup [teacher=" + teacher + ", students=" + students + ", room=" + room + ", humanResources="
 				+ humanResources + "]";
 	}
-
+	
 	public int getId() {
 		return id;
 	}
@@ -98,21 +103,21 @@ public class MateGroup implements Serializable {
 		MateGroup mateGroup = new MateGroup();
 		mateGroup.setId(18122018);
 
-		Teacher teacher = new Teacher("Serhii", "Pasko", 1988, 666);
+		Teacher teacher = new Teacher("Serhii", "Pasko", 1988, "Java", 666);
 		mateGroup.setTeacher(teacher);
 
 		Room room = new Room("Kiyv", "Tarasivska", 16, 28);
 		mateGroup.setRoom(room);
 
 		Set<HumanResource> humanResources = new HashSet<>();
-		humanResources.add(new HumanResource("Karmen", "", 1990, 2015));
-		humanResources.add(new HumanResource("Efiria", "", 1989, 2016));
+		humanResources.add(new HumanResource("Karmen", "Sanya", 1990, 500, 2018));
+		humanResources.add(new HumanResource("Efiria", "Vanya", 1989, 700, 2019));
 		mateGroup.setHumanResources(humanResources);
 
 		List<Person> students = new ArrayList<>();
-		students.add(new Student("Iza", "Rabinovish", 1997));
-		students.add(new Student("Abram", "Kolom", 1998));
-		students.add(new Teacher("Moisha", "Stefan", 1990, 666));
+		students.add(new Student("Iza", "Rabinovish", 1997, "Java"));
+		students.add(new Student("Abram", "Kolom", 1998, "Java"));
+		students.add(new Teacher("Moisha", "Stefan", 1990, "FrontEnd", 666));
 		mateGroup.setStudents(students);
 
 		return mateGroup;

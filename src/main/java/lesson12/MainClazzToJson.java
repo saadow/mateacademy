@@ -1,27 +1,35 @@
 package lesson12;
 
 import java.io.File;
+
 import java.io.IOException;
 
-import com.fasterxml.jackson.core.util.DefaultPrettyPrinter;
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.databind.ObjectWriter;
+import javax.xml.bind.JAXBContext;
+import javax.xml.bind.JAXBException;
+import javax.xml.bind.Marshaller;
+import org.eclipse.persistence.jaxb.MarshallerProperties;
+import org.eclipse.persistence.oxm.MediaType;
 
 public class MainClazzToJson {
 	public static void main(String[] args) {
 
 		MateGroup mateGroup = MateGroup.mateGroupExampleCreator();
-		ObjectMapper mapper = new ObjectMapper();
-		ObjectWriter writer = mapper.writer(new DefaultPrettyPrinter());
 
 		try {
+			File file = new File("src/resources/mateGroup.json");
+			JAXBContext jaxbContext = JAXBContext.newInstance(MateGroup.class);
+			Marshaller jaxbMarshaller = jaxbContext.createMarshaller();
 
-			writer.writeValue(new File("src/resources/mateGroup.json"), mateGroup);
-			System.out.println(writer.writeValueAsString(mateGroup));
+			// output pretty printed
+			jaxbMarshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
 
-		} catch (IOException e) {
+			jaxbMarshaller.setProperty(MarshallerProperties.MEDIA_TYPE, MediaType.APPLICATION_JSON);
+			jaxbMarshaller.setProperty(MarshallerProperties.JSON_INCLUDE_ROOT, false);
+			jaxbMarshaller.marshal(mateGroup, file);
+			jaxbMarshaller.marshal(mateGroup, System.out);
+
+		} catch (JAXBException e) {
 			e.printStackTrace();
 		}
-
 	}
 }
