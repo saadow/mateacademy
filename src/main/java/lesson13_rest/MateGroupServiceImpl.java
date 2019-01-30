@@ -14,7 +14,7 @@ import javax.ws.rs.core.Response;
 import javax.ws.rs.core.Response.Status;
 
 import lesson12.MateGroup;
-import lesson12.Student;
+import lesson12.Person;
 
 @Path("/rs/mate")
 public class MateGroupServiceImpl implements MateGroupService {
@@ -32,7 +32,7 @@ public class MateGroupServiceImpl implements MateGroupService {
 	@Path("/{groupId}")
 	@Consumes(MediaType.APPLICATION_JSON)
 	@Produces(MediaType.APPLICATION_JSON)
-	public Response addStudents(@PathParam("groupId") int groupId, Student person) {
+	public Response addStudents(@PathParam("groupId") int groupId, Person person) {
 		if (groupId == mateGroup.getId()) {
 			mateGroup.getStudents().addAll(Arrays.asList(person));
 			return Response.status(Status.ACCEPTED).entity(mateGroup).type(MediaType.APPLICATION_JSON).build();

@@ -6,7 +6,7 @@ import javax.jws.WebService;
 import lesson12.MateGroup;
 import lesson12.Person;
 
-@WebService(endpointInterface = "lesson13.MateGroupService")
+@WebService(endpointInterface = "lesson13_soap.MateGroupService")
 public class MateGroupServiceImpl implements MateGroupService {
 	private MateGroup mateGroup = MateGroup.mateGroupExampleCreator();
 
