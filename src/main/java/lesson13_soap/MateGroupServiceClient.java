@@ -32,6 +32,7 @@ public class MateGroupServiceClient {
 		persons.add(new Student("First", "First", 1995, null));
 		persons.add(new Teacher("Second", "Second", 1990, null, 666));
 		System.out.println(hello.addStudents(persons));
+		System.out.println(hello.putTeacher(new Teacher("New", "Teacher", 1995, "Java", 1800)));
 
 	}
 
