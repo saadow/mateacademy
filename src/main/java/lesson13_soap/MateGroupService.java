@@ -9,7 +9,7 @@ import javax.jws.soap.SOAPBinding.Style;
 
 import lesson12.MateGroup;
 import lesson12.Person;
-
+import lesson12.Teacher;
 
 @WebService
 @SOAPBinding(style = Style.DOCUMENT)
@@ -20,4 +20,7 @@ public interface MateGroupService {
 
 	@WebMethod
 	public MateGroup addStudents(List<Person> persons);
+
+	@WebMethod
+	public MateGroup putTeacher(Teacher teacher);
 }

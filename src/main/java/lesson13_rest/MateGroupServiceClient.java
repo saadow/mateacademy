@@ -21,8 +21,11 @@ public class MateGroupServiceClient {
 
 			conn = addStudent("123");
 			showInfo(conn);
-			
+
 			conn = addStudent("18122018");
+			showInfo(conn);
+			
+			conn = putTeacher("18122018");
 			showInfo(conn);
 
 		} catch (IOException e) {
@@ -69,6 +72,21 @@ public class MateGroupServiceClient {
 		HttpURLConnection conn = (HttpURLConnection) url.openConnection();
 		conn.setRequestMethod("GET");
 		conn.setRequestProperty("Accept", "application/json");
+		return conn;
+	}
+
+	private static HttpURLConnection putTeacher(String pathParam)
+			throws MalformedURLException, IOException, ProtocolException {
+		URL url = new URL("http://localhost:9998/rs/mate/" + pathParam + "/teacher");
+		HttpURLConnection conn = (HttpURLConnection) url.openConnection();
+		conn.setDoOutput(true);
+		conn.setRequestMethod("PUT");
+		conn.setRequestProperty("Content-Type", "application/json");
+		String input = "{\"name\": \"New\",\"surname\": \"Teacher\", \"yearOfBorn\": 1995, \"specialization\": \"Java\", \"salary\": 1800}";
+
+		OutputStream os = conn.getOutputStream();
+		os.write(input.getBytes());
+		os.flush();
 		return conn;
 	}
 

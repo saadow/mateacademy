@@ -15,6 +15,7 @@ import javax.ws.rs.core.Response.Status;
 
 import lesson12.MateGroup;
 import lesson12.Person;
+import lesson12.Teacher;
 
 @Path("/rs/mate")
 public class MateGroupServiceImpl implements MateGroupService {
@@ -37,6 +38,19 @@ public class MateGroupServiceImpl implements MateGroupService {
 			mateGroup.getStudents().addAll(Arrays.asList(person));
 			return Response.status(Status.ACCEPTED).entity(mateGroup).type(MediaType.APPLICATION_JSON).build();
 		}
+		return Response.status(Status.NOT_FOUND).build();
+	}
+
+	@Override
+	@PUT
+	@Path("/{groupId}/teacher")
+	@Consumes(MediaType.APPLICATION_JSON)
+	@Produces(MediaType.APPLICATION_JSON)
+	public Response putTeacher(@PathParam("groupId") int groupId, Teacher teacher) {
+			if (groupId == mateGroup.getId() ) {
+				mateGroup.setTeacher(teacher);
+				return Response.status(Status.ACCEPTED).entity(mateGroup).type(MediaType.APPLICATION_JSON).build();
+			}
 		return Response.status(Status.NOT_FOUND).build();
 	}
 
