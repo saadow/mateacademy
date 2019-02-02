@@ -77,7 +77,7 @@ public class MateGroupServiceImpl implements MateGroupService {
 		}
 		return Response.status(Status.NOT_FOUND).build();
 	}
-
+  
 	@Override
 	@PUT
 	@Path("/hrs")
