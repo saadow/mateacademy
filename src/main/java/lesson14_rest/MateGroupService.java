@@ -3,6 +3,7 @@ package lesson14_rest;
 import javax.ws.rs.core.Response;
 
 import lesson12.HumanResource;
+import lesson12.Person;
 
 public interface MateGroupService {
 
