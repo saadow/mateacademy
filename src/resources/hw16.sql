@@ -19,18 +19,13 @@ WHERE
     );
 
 SELECT
-    order_num,
-    amount,
-    company,
-    credit_limit
+    orders.order_num,
+    orders.amount,
+    customers.company,
+    customers.credit_limit
 FROM
-    (
-        SELECT
-            *
-        FROM
-            orders
-            INNER JOIN customers ON orders.cust = customers.cust_num
-    );
+    orders
+    INNER JOIN customers ON orders.cust = customers.cust_num;
 
 SELECT
     name,
@@ -46,135 +41,89 @@ FROM
     );
 
 SELECT
-    city,
-    name,
-    title
+    offces.city,
+    salesreps.name,
+    salesreps.title
 FROM
-    (
-        SELECT
-            *
-        FROM
-            offices
-            INNER JOIN salesreps ON offices.mgr = salesreps.empl_num
-    )
+    offices
+    INNER JOIN salesreps ON offices.mgr = salesreps.empl_num
 WHERE
     target > 600.00;
 
 SELECT
-    order_num,
-    amount,
-    description
+    orders.order_num,
+    orders.amount,
+    products.description
 FROM
-    (
-        SELECT
-            *
-        FROM
-            orders
-            INNER JOIN products ON orders.mfr = products.mfr_id
-                                   AND orders.product = products.product_id
-    );
+    orders
+    INNER JOIN products ON orders.mfr = products.mfr_id
+                           AND orders.product = products.product_id;
 
 SELECT
-    order_num,
-    amount,
-    company,
-    name
+    orders.order_num,
+    orders.amount,
+    customers.company,
+    salesreps.name
 FROM
-    (
-        SELECT
-            *
-        FROM
-            orders
-            INNER JOIN customers ON orders.cust = customers.cust_num
-            INNER JOIN salesreps ON orders.rep = salesreps.empl_num
-    )
+    orders
+    INNER JOIN customers ON orders.cust = customers.cust_num
+    INNER JOIN salesreps ON orders.rep = salesreps.empl_num
 WHERE
     amount > 700;
 
 SELECT
-    order_num,
-    amount,
-    company,
-    name
+    orders.order_num,
+    orders.amount,
+    customers.company,
+    salesreps.name
 FROM
-    (
-        SELECT
-            *
-        FROM
-            orders
-            INNER JOIN customers ON orders.cust = customers.cust_num
-            INNER JOIN salesreps ON customers.cust_rep = salesreps.empl_num
-    )
+    orders
+    INNER JOIN customers ON orders.cust = customers.cust_num
+    INNER JOIN salesreps ON customers.cust_rep = salesreps.empl_num
 WHERE
     amount > 700;
 
 SELECT
-    order_num,
-    amount,
-    company,
-    name,
-    city
+    orders.order_num,
+    orders.amount,
+    customers.company,
+    salesreps.name,
+    offices.city
 FROM
-    (
-        SELECT
-            *
-        FROM
-            orders
-            INNER JOIN customers ON orders.cust = customers.cust_num
-            INNER JOIN salesreps ON customers.cust_rep = salesreps.empl_num
-            INNER JOIN offices ON salesreps.rep_office = offices.office
-    )
+    orders
+    INNER JOIN customers ON orders.cust = customers.cust_num
+    INNER JOIN salesreps ON customers.cust_rep = salesreps.empl_num
+    INNER JOIN offices ON salesreps.rep_office = offices.office
 WHERE
     amount > 700;
 
 SELECT
-    order_num,
-    amount,
-    order_date,
-    name
+    orders.order_num,
+    orders.amount,
+    orders.order_date,
+    salesreps.name
 FROM
-    (
-        SELECT
-            *
-        FROM
-            orders
-            INNER JOIN salesreps ON orders.order_date = salesreps.hire_date
-    );
+    orders
+    INNER JOIN salesreps ON orders.order_date = salesreps.hire_date;
 
 SELECT
-    name,
-    quota,
-    city,
-    target
+    salesreps.name,
+    salesreps.quota,
+    offices.city,
+    offices.target
 FROM
-    (
-        SELECT
-            *
-        FROM
-            salesreps
-            INNER JOIN offices ON salesreps.quota > offices.target
-    )
+    salesreps
+    INNER JOIN offices ON salesreps.quota > offices.target
 WHERE
     quota > target;
 
 SELECT
-    name,
-    sales,
-    city
+    salesreps.name,
+    salesreps.sales,
+    offices.city
 FROM
-    (
-        SELECT
-            *
-        FROM
-            salesreps
-            INNER JOIN (
-                SELECT
-                    city,
-                    office
-                FROM
-                    offices
-            ) ON salesreps.rep_office = office
-    );
+    salesreps
+    INNER JOIN offices ON salesreps.rep_office = office;
 
 SELECT
     *
