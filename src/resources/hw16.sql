@@ -18,6 +18,28 @@ WHERE
             OR ps.description LIKE '%А%'
     );
 
+/* вариант с джоином */
+SELECT DISTINCT
+    customers.cust_num,
+    customers.company,
+    customers.cust_rep,
+    customers.credit_limit
+FROM
+    customers
+    INNER JOIN (
+        SELECT DISTINCT
+            company
+        FROM
+            customers   cs
+            INNER JOIN orders      os ON cs.cust_rep = os.rep
+            INNER JOIN products    ps ON os.product = ps.product_id
+        WHERE
+            ps.description LIKE '%a%'
+            OR ps.description LIKE '%а%'
+            OR ps.description LIKE '%A%'
+            OR ps.description LIKE '%А%'
+    ) ON customers.company = company;
+    
 SELECT
     orders.order_num,
     orders.amount,
