@@ -12,7 +12,7 @@ public class CountThread implements Runnable {
 		this.name = name;
 	}
 
-	@Override
+	@Overrides
 	public void run() {
 		try {
 			System.out.println(name + " waiting");
