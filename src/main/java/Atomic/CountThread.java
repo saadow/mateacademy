@@ -23,7 +23,7 @@ public class CountThread implements Runnable {
 		} catch (InterruptedException e) {
 			System.out.println(e.getMessage());
 		}
-		System.out.println(name + " end work");
+		System.out.println(name + " end work.");
 	}
 
 }
