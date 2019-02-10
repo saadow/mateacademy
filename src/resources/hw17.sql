@@ -423,10 +423,9 @@ GROUP BY
 SELECT
     customers.cust_num,
     customers.company,
-    AVG(salesreps.sales) AS avg_sales
+    AVG(orders.amount) AS avg_buys
 FROM
     customers
-    INNER JOIN salesreps ON customers.cust_rep = salesreps.empl_num
     INNER JOIN orders ON customers.cust_num = orders.cust
     INNER JOIN (
         SELECT
@@ -448,11 +447,10 @@ GROUP BY
 SELECT
     customers.cust_num,
     customers.company,
-    AVG(salesreps.sales) AS avg_sales,
+    AVG(orders.amount) AS avg_buys,
     orders.mfr
 FROM
     customers
-    INNER JOIN salesreps ON customers.cust_rep = salesreps.empl_num
     INNER JOIN orders ON customers.cust_num = orders.cust
     INNER JOIN (
         SELECT
