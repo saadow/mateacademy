@@ -6,7 +6,6 @@ import java.util.Set;
 
 public interface OrderDao {
 	Set<Order> getAllOrders() throws SQLException;
-	Set<Order> getAllOrdersJoin() throws SQLException;
 	Order findOrderById(BigDecimal id) throws SQLException;
 	boolean insertOrder(Order order) throws SQLException;
 	boolean updateOrder(Order order) throws SQLException;
