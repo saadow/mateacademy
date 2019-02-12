@@ -24,6 +24,14 @@
 	</properties>
 
 	<dependencies>
+		<!--  Oracle JDBC -->
+		<dependency>
+			<groupId>org.oracle</groupId>
+			<artifactId>ojdbc7</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/ojdbc7.jar</systemPath>
+		</dependency>
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
