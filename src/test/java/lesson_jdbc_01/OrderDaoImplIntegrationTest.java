@@ -1,14 +1,11 @@
 package lesson_jdbc_01;
 
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertNull;
 
 import java.math.BigDecimal;
 import java.sql.Date;
 import java.sql.SQLException;
-import java.util.Set;
 
 import org.junit.Test;
 
@@ -25,26 +22,11 @@ public class OrderDaoImplIntegrationTest {
 		System.out.println(order);
 		assertNull(order);
 	}
-
+	
 	@Test
 	public void testFindOrderById() throws SQLException {
 		Order order = orderDao.findOrderById(ALREADY_EXIST_ORDER);
 		System.out.println(order);
 		assertEquals(order, ORDER);
-	}
-
-	@Test
-	public void testGetAllOrders() throws SQLException {
-		Set<Order> orders = orderDao.getAllOrders();
-		System.out.println(orders);
-		assertFalse(orders.isEmpty());
-
-	}
-
-	@Test
-	public void testGetAllOrdersJoin() throws SQLException {
-		Set<Order> orders = orderDao.getAllOrdersJoin();
-		System.out.println(orders);
-		assertFalse(orders.isEmpty());
 	}
 }
