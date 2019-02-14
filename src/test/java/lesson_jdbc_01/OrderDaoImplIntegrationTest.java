@@ -23,7 +23,7 @@ public class OrderDaoImplIntegrationTest {
 	private static final Order INSERT_DELETE_ORDER = new Order(BigDecimal.valueOf(111112), null, Date.valueOf("2019-02-14"), "REI",
 			BigDecimal.valueOf(10), BigDecimal.valueOf(100));
 
-	private static final Order UPDATE_ORDER = new Order(BigDecimal.valueOf(111112), null, Date.valueOf("2019-02-14"), "REI",
+	private static final Order UPDATE_ORDER = new Order(BigDecimal.valueOf(111111), null, Date.valueOf("2019-02-14"), "REI",
 			BigDecimal.valueOf(100), BigDecimal.valueOf(1000));
 	private OrderDao orderDao = new OrderDaoImpl();
 
@@ -57,17 +57,17 @@ public class OrderDaoImplIntegrationTest {
 	}
 
 	@Test
-	public void testInsertOrder() throws SQLException {
+	public void test1InsertOrder() throws SQLException {
 		assertTrue(orderDao.insertOrder(INSERT_DELETE_ORDER));
 	}
 	
 	@Test
-	public void testUpdateOrder() throws SQLException {
+	public void test2UpdateOrder() throws SQLException {
 		assertTrue(orderDao.updateOrder(UPDATE_ORDER));
 	}
 	
 	@Test
-	public void testDeleteOrder() throws SQLException {
-		assertTrue(orderDao.deleteOrder(BigDecimal.valueOf(111112)));
+	public void test3DeleteOrder() throws SQLException {
+		assertTrue(orderDao.deleteOrder(INSERT_DELETE_ORDER.getOrderNum()));
 	}
 }

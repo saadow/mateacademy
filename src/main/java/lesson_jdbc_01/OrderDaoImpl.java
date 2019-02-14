@@ -5,6 +5,7 @@ import java.sql.Connection;
 import java.sql.Date;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.ResultSetMetaData;
 import java.sql.SQLException;
 import java.util.HashSet;
 import java.util.Set;
@@ -17,6 +18,15 @@ public class OrderDaoImpl implements OrderDao {
 		Connection conn = ConnectToDB.getConnection();
 		PreparedStatement stmt = conn.prepareStatement("SELECT * FROM orders");
 		ResultSet rsOrder = stmt.executeQuery();
+		ResultSetMetaData resultSetMetaData = rsOrder.getMetaData();
+		int columnCount = resultSetMetaData.getColumnCount();
+		for (int i = 1; i <= columnCount; ++i) {
+			System.out.println("***************");
+			System.out.print("Column Name : " + resultSetMetaData.getColumnLabel(i) + " \n");
+			System.out.print("Column Type : " + resultSetMetaData.getColumnType(i) + " \n");
+			System.out.print("Column Class Name : " + resultSetMetaData.getColumnClassName(i) + " \n");
+			System.out.print("Column Type Name :" + resultSetMetaData.getColumnTypeName(i) + " \n");
+		}
 		while (rsOrder.next()) {
 			Order order = new Order(rsOrder.getBigDecimal("order_num"), null, rsOrder.getDate("order_date"),
 					rsOrder.getString("mfr"), rsOrder.getBigDecimal("qty"), rsOrder.getBigDecimal("amount"));
@@ -27,7 +37,7 @@ public class OrderDaoImpl implements OrderDao {
 			while (rsProduct.next()) {
 				Product product = new Product(rsProduct.getString("product_Id"), rsProduct.getString("mfr_Id"),
 						rsProduct.getString("description"), rsProduct.getBigDecimal("price"),
-						rsProduct.getBigDecimal("qty_On_Hand"));		
+						rsProduct.getBigDecimal("qty_On_Hand"));
 				order.setProduct(product);
 			}
 			rsProduct.close();
@@ -78,24 +88,22 @@ public class OrderDaoImpl implements OrderDao {
 		rs.close();
 		stmt.close();
 		conn.close();
-		// TODO Auto-generated method stub
 		return order;
 	}
 
 	@Override
 	public boolean insertOrder(Order order) throws SQLException {
 		Connection conn = ConnectToDB.getConnection();
-		PreparedStatement stmt = conn.prepareStatement(
-				"INSERT INTO orders values (?, ?, ?, ?, ?, ?, ?, ?)");
+		PreparedStatement stmt = conn.prepareStatement("INSERT INTO orders values (?, ?, ?, ?, ?, ?, ?, ?)");
 		stmt.setBigDecimal(1, order.getOrderNum());
 		stmt.setDate(2, order.getOrderDate());
 		stmt.setBigDecimal(3, null);
 		stmt.setBigDecimal(4, null);
 		stmt.setString(5, order.getMfr());
-		stmt.setString(6, null);	
+		stmt.setString(6, null);
 		stmt.setBigDecimal(7, order.getQty());
 		stmt.setBigDecimal(8, order.getAmount());
-	
+
 		stmt.executeUpdate();
 		stmt.close();
 		conn.close();
@@ -110,11 +118,8 @@ public class OrderDaoImpl implements OrderDao {
 		stmt.setBigDecimal(1, order.getQty());
 		stmt.setBigDecimal(2, order.getAmount());
 		stmt.setBigDecimal(3, order.getOrderNum());
-		
-		int rowsUpdated = stmt.executeUpdate();
-		if (rowsUpdated > 0) {
-			return true;
-		}
+
+		stmt.executeUpdate();
 		stmt.close();
 		conn.close();
 		return true;
@@ -127,10 +132,7 @@ public class OrderDaoImpl implements OrderDao {
 		PreparedStatement stmt = conn.prepareStatement(sql);
 		stmt.setBigDecimal(1, id);
 
-		int rowsDeleted = stmt.executeUpdate();
-		if (rowsDeleted > 0) {
-			return true;
-		}
+		stmt.executeUpdate();
 		stmt.close();
 		conn.close();
 		return true;
