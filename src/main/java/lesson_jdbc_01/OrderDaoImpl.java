@@ -2,6 +2,7 @@ package lesson_jdbc_01;
 
 import java.math.BigDecimal;
 import java.sql.Connection;
+import java.sql.Date;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -26,7 +27,7 @@ public class OrderDaoImpl implements OrderDao {
 			while (rsProduct.next()) {
 				Product product = new Product(rsProduct.getString("product_Id"), rsProduct.getString("mfr_Id"),
 						rsProduct.getString("description"), rsProduct.getBigDecimal("price"),
-						rsProduct.getBigDecimal("qty_On_Hand"));
+						rsProduct.getBigDecimal("qty_On_Hand"));		
 				order.setProduct(product);
 			}
 			rsProduct.close();
@@ -45,8 +46,8 @@ public class OrderDaoImpl implements OrderDao {
 		Connection conn = ConnectToDB.getConnection();
 		PreparedStatement stmt = conn.prepareStatement(
 				"SELECT orders.order_num, orders.order_date, orders.mfr, products.product_id, products.mfr_id, "
-				+ "products.description, products.price, products.qty_on_hand,  qty, amount FROM orders "
-				+ "INNER   join products on orders.product = products.product_id");
+						+ "products.description, products.price, products.qty_on_hand,  qty, amount FROM orders "
+						+ "INNER   join products on orders.product = products.product_id");
 		ResultSet rs = stmt.executeQuery();
 
 		while (rs.next()) {
@@ -83,20 +84,56 @@ public class OrderDaoImpl implements OrderDao {
 
 	@Override
 	public boolean insertOrder(Order order) throws SQLException {
-		// TODO Auto-generated method stub
-		return false;
+		Connection conn = ConnectToDB.getConnection();
+		PreparedStatement stmt = conn.prepareStatement(
+				"INSERT INTO orders values (?, ?, ?, ?, ?, ?, ?, ?)");
+		stmt.setBigDecimal(1, order.getOrderNum());
+		stmt.setDate(2, order.getOrderDate());
+		stmt.setBigDecimal(3, null);
+		stmt.setBigDecimal(4, null);
+		stmt.setString(5, order.getMfr());
+		stmt.setString(6, null);	
+		stmt.setBigDecimal(7, order.getQty());
+		stmt.setBigDecimal(8, order.getAmount());
+	
+		stmt.executeUpdate();
+		stmt.close();
+		conn.close();
+		return true;
 	}
 
 	@Override
 	public boolean updateOrder(Order order) throws SQLException {
-		// TODO Auto-generated method stub
-		return false;
+		Connection conn = ConnectToDB.getConnection();
+		String sql = "UPDATE orders SET qty=?, amount=?  WHERE order_num=?";
+		PreparedStatement stmt = conn.prepareStatement(sql);
+		stmt.setBigDecimal(1, order.getQty());
+		stmt.setBigDecimal(2, order.getAmount());
+		stmt.setBigDecimal(3, order.getOrderNum());
+		
+		int rowsUpdated = stmt.executeUpdate();
+		if (rowsUpdated > 0) {
+			return true;
+		}
+		stmt.close();
+		conn.close();
+		return true;
 	}
 
 	@Override
 	public boolean deleteOrder(BigDecimal id) throws SQLException {
-		// TODO Auto-generated method stub
-		return false;
+		Connection conn = ConnectToDB.getConnection();
+		String sql = "DELETE FROM orders WHERE order_num=?";
+		PreparedStatement stmt = conn.prepareStatement(sql);
+		stmt.setBigDecimal(1, id);
+
+		int rowsDeleted = stmt.executeUpdate();
+		if (rowsDeleted > 0) {
+			return true;
+		}
+		stmt.close();
+		conn.close();
+		return true;
 	}
 
 }

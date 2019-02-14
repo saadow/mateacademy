@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE xml>
-<Configuration status="WARN" monitorInterval="30">
+<Configuration status="DEBUG" monitorInterval="30">
 	<Properties>
 		<Property name="LOG_PATTERN">
 			| %d{yyyy-MM-dd HH:mm:ss} | %p | at %C{2}(%F:%L) | %m | %n  
@@ -34,7 +34,7 @@
 		<AsyncLogger name="error-logger" level="ERROR">
 			<AppenderRef ref="FEMAIL" />
 		</AsyncLogger>
-		<Root level="ERROR" includeLocation="true">
+		<Root level="DEBUG" includeLocation="true">
 			<AppenderRef ref="STDOUT" level="DEBUG" />
 			<AppenderRef ref="PROGRAM-LOGGER-APPENDER" level="DEBUG" />
 		</Root>

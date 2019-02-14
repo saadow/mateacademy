@@ -1,13 +1,18 @@
-package lesson_jdbc_01;
+package lesson_jdbc_02;
 
 import java.beans.PropertyVetoException;
 import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.Locale;
 
 import com.mchange.v2.c3p0.ComboPooledDataSource;
 
-public class ConnectToDB {
+import oracle.jdbc.driver.OracleDriver;
+
+public class DatabaseUtility {
 
 	public static final String URL = "jdbc:oracle:thin:@localhost:1521:XE";
 	public static final String USER = "MA_STUDENT";
@@ -37,7 +42,6 @@ public class ConnectToDB {
 		cpds.setAcquireIncrement(5);
 		cpds.setMaxPoolSize(20);
 		cpds.setMaxStatements(100);
-		cpds.setAcquireRetryAttempts(5);
 
 		return cpds;
 	}
