@@ -48,60 +48,70 @@ public class CustomerDaoImpl implements CustomerDao {
 
 	@Override
 	public boolean insertCustomer(Customer customer) throws SQLException {
-		Connection conn = ConnectToDB.getConnection();
-		PreparedStatement stmt = conn.prepareStatement("INSERT INTO customers values (?, ?, ?, ?)");
-		stmt.setBigDecimal(1, customer.getCustNum());
-		stmt.setString(2, customer.getCompany());
-		stmt.setBigDecimal(3, customer.getCustRep());
-		stmt.setBigDecimal(4, customer.getCreditLimit());
+		boolean result = false;
+		Connection conn = null;
+		PreparedStatement stmt = null;
+		try {
+			conn = ConnectToDB.getConnection();
+			stmt = conn.prepareStatement("INSERT INTO customers values (?, ?, ?, ?)");
+			stmt.setBigDecimal(1, customer.getCustNum());
+			stmt.setString(2, customer.getCompany());
+			stmt.setBigDecimal(3, customer.getCustRep());
+			stmt.setBigDecimal(4, customer.getCreditLimit());
 
-		int rowsChanged = stmt.executeUpdate();
-		if (rowsChanged > 0) {
+			int rowsInserted = stmt.executeUpdate();
+			if (rowsInserted > 0) {
+				result = true;
+			}
+		} finally {
 			stmt.close();
 			conn.close();
-			return true;
 		}
-		stmt.close();
-		conn.close();
-		return false;
+		return result;
 	}
 
 	@Override
 	public boolean updateCustomer(Customer customer) throws SQLException {
-		Connection conn = ConnectToDB.getConnection();
-		String sql = "UPDATE customers SET company=?, credit_limit=?  WHERE cust_num=?";
-		PreparedStatement stmt = conn.prepareStatement(sql);
-		stmt.setString(1, customer.getCompany());
-		stmt.setBigDecimal(2, customer.getCreditLimit());
-		stmt.setBigDecimal(3, customer.getCustNum());
-		
-		int rowsChanged = stmt.executeUpdate();
-		if (rowsChanged > 0) {
+		boolean result = false;
+		Connection conn = null;
+		PreparedStatement stmt = null;
+		try {
+			conn = ConnectToDB.getConnection();
+			stmt = conn.prepareStatement("UPDATE customers SET company=?, credit_limit=?  WHERE cust_num=?");
+			stmt.setString(1, customer.getCompany());
+			stmt.setBigDecimal(2, customer.getCreditLimit());
+			stmt.setBigDecimal(3, customer.getCustNum());
+
+			int rowsChanged = stmt.executeUpdate();
+			if (rowsChanged > 0) {
+				result = true;
+			}
+		} finally {
 			stmt.close();
 			conn.close();
-			return true;
 		}
-		stmt.close();
-		conn.close();
-		return false;
+		return result;
 	}
 
 	@Override
 	public boolean deleteCustomer(BigDecimal id) throws SQLException {
-		Connection conn = ConnectToDB.getConnection();
-		String sql = "DELETE FROM customers WHERE cust_num = ?";
-		PreparedStatement stmt = conn.prepareStatement(sql);
-		stmt.setBigDecimal(1, id);
+		boolean result = false;
+		Connection conn = null;
+		PreparedStatement stmt = null;
+		try {
+			conn = ConnectToDB.getConnection();
+			stmt = conn.prepareStatement("DELETE FROM customers WHERE cust_num = ?");
+			stmt.setBigDecimal(1, id);
 
-		int rowsChanged = stmt.executeUpdate();
-		if (rowsChanged > 0) {
+			int rowsChanged = stmt.executeUpdate();
+			if (rowsChanged > 0) {
+				result = true;
+			}
+		} finally {
 			stmt.close();
 			conn.close();
-			return true;
 		}
-		stmt.close();
-		conn.close();
-		return false;
+		return result;
 	}
 
 	@Override
@@ -113,8 +123,8 @@ public class CustomerDaoImpl implements CustomerDao {
 
 		Customer customer = null;
 		if (rs.next()) {
-			customer = new Customer(rs.getBigDecimal("cust_num"), rs.getString("company"),
-					rs.getBigDecimal("cust_rep"), rs.getBigDecimal("credit_limit"));
+			customer = new Customer(rs.getBigDecimal("cust_num"), rs.getString("company"), rs.getBigDecimal("cust_rep"),
+					rs.getBigDecimal("credit_limit"));
 		}
 		rs.close();
 		stmt.close();
