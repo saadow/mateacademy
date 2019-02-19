@@ -15,7 +15,7 @@ public class CustomerDaoImplInterfaceTest {
 			BigDecimal.valueOf(103), BigDecimal.valueOf(120000));
 	private static final Customer UPDATE_CUSTOMER = new Customer(BigDecimal.valueOf(11111), "SCOOBY DOOBY DOOPS",
 			BigDecimal.valueOf(103), BigDecimal.valueOf(12000));
-	private CustomerDaoImplInterface customerDao = new CustomerDaoImplInterface();
+	private CustomerDaoInterface customerDao = new CustomerDaoImplInterface();
 
 	@Test
 	public void test1InsertCustomer() throws SQLException {
