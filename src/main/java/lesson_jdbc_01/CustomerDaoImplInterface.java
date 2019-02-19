@@ -3,8 +3,9 @@ package lesson_jdbc_01;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
-public class CustomerDaoImplInterface {
+public class CustomerDaoImplInterface implements CustomerDaoInterface{
 
+	@Override
 	public boolean insertCustomer(Customer customer) throws SQLException {
 		return ((TemplateInterface) conn -> {
 			PreparedStatement stmt;
@@ -18,6 +19,7 @@ public class CustomerDaoImplInterface {
 		}).operationTemplate();
 	}
 
+	@Override
 	public boolean updateCustomer(Customer customer) throws SQLException {
 		return ((TemplateInterface) conn -> {
 			PreparedStatement stmt;
@@ -30,6 +32,7 @@ public class CustomerDaoImplInterface {
 		}).operationTemplate();
 	}
 
+	@Override
 	public boolean deleteCustomer(Customer customer) throws SQLException {
 		return ((TemplateInterface) conn -> {
 			PreparedStatement stmt;
