@@ -21,9 +21,30 @@
 		<jaxb-xjc.version>2.3.1</jaxb-xjc.version>
 		<jaxws-rt.version>2.3.1</jaxws-rt.version>
 		<jackson-databind.version>2.9.8</jackson-databind.version>
+		<spring.version>4.1.6.RELEASE</spring.version>
+		<dbh2.version>1.4.187</dbh2.version>
+		<derby.version>10.11.1.1</derby.version>
 	</properties>
 
 	<dependencies>
+		<!-- Spring JDBC -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-jdbc</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
+		<!-- H2 DB -->
+		<dependency>
+			<groupId>com.h2database</groupId>
+			<artifactId>h2</artifactId>
+			<version>${dbh2.version}</version>
+		</dependency>
+		<!-- Derby DB -->
+		<dependency>
+			<groupId>org.apache.derby</groupId>
+			<artifactId>derby</artifactId>
+			<version>${derby.version}</version>
+		</dependency>
 		<!-- Oracle JDBC -->
 		<dependency>
 			<groupId>org.oracle</groupId>
