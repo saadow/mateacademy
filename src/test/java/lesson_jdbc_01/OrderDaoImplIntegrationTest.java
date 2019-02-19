@@ -66,8 +66,8 @@ public class OrderDaoImplIntegrationTest {
 		assertTrue(orderDao.updateOrder(UPDATE_ORDER));
 	}
 	
-	@Test
-	public void test3DeleteOrder() throws SQLException {
-		assertTrue(orderDao.deleteOrder(INSERT_DELETE_ORDER.getOrderNum()));
-	}
+//	@Test
+//	public void test3DeleteOrder() throws SQLException {
+//		assertTrue(orderDao.deleteOrder(INSERT_DELETE_ORDER.getOrderNum()));
+//	}
 }
