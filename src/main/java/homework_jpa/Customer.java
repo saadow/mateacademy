@@ -11,6 +11,7 @@ import javax.persistence.Table;
 @Table(name = "CUSTOMERS")
 public class Customer implements java.io.Serializable{
 	@Id
+	@Column(name = "cust_num")
 	private BigDecimal custNum;
 	private String company;
 	@Column(name = "cust_rep")
