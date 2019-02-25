@@ -4,7 +4,7 @@ import java.math.BigDecimal;
 import java.sql.SQLException;
 
 public interface CustomerDao {
-	boolean insertCustomer(Customer customer) throws SQLException;
-	boolean updateCustomer(Customer customer) throws SQLException;
-	boolean deleteCustomer(BigDecimal id) throws SQLException;
+	boolean insertCustomer(Customer customer);
+	boolean updateCustomer(Customer customer);
+	boolean deleteCustomer(BigDecimal id);
 }

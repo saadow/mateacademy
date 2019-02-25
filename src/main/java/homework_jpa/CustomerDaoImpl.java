@@ -25,7 +25,7 @@ public class CustomerDaoImpl implements CustomerDao {
 	private EntityManager entityManager = factory.createEntityManager();
 
 	@Override
-	public boolean insertCustomer(Customer customer) throws SQLException {
+	public boolean insertCustomer(Customer customer) {
 		LOG.debug("persisting Customer instance");
 		try {
 			entityManager.getTransaction().begin();
@@ -44,7 +44,7 @@ public class CustomerDaoImpl implements CustomerDao {
 	}
 
 	@Override
-	public boolean updateCustomer(Customer customer) throws SQLException {
+	public boolean updateCustomer(Customer customer) {
 		LOG.debug("merging Customer instance");
 		try {
 			entityManager.getTransaction().begin();
@@ -63,7 +63,7 @@ public class CustomerDaoImpl implements CustomerDao {
 	}
 
 	@Override
-	public boolean deleteCustomer(BigDecimal id) throws SQLException {
+	public boolean deleteCustomer(BigDecimal id) {
 		LOG.debug("removing Customer instance");
 		try {
 			entityManager.getTransaction().begin();
