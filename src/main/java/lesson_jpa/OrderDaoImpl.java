@@ -96,21 +96,28 @@ public class OrderDaoImpl implements OrderDao {
 	}
 
 	@Override
-	public Set<Order> getAllOrders() throws SQLException {
+	public Set<Order> getAllOrders() {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public Set<Order> getAllOrdersJoin() throws SQLException {
+	public Set<Order> getAllOrdersJoin() {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public Order findOrderById(BigDecimal id) throws SQLException {
-		// TODO Auto-generated method stub
-		return null;
+	public Order findOrderById(BigDecimal id) {
+		LOG.debug("finding Order by id: " + id);
+		try {
+			Order order = entityManager.find(Order.class, id);
+			LOG.debug("find successful");
+			return order;
+		} catch (RuntimeException re) {
+			LOG.error("find failed", re);
+			throw re;
+		}
 	}
 
 }

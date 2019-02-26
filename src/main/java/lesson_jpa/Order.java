@@ -5,7 +5,10 @@ import java.util.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
@@ -22,8 +25,9 @@ public class Order implements java.io.Serializable {
 	private Date orderDate;
 	@Column
 	private String mfr;
-	@Column
-	private String product;
+	@ManyToOne(fetch = FetchType.EAGER)
+	@JoinColumn(name = "PRODUCT")
+	private Product product;
 	@Column
 	private BigDecimal qty;
 	@Column
@@ -32,12 +36,16 @@ public class Order implements java.io.Serializable {
 	public Order() {
 	}
 
-	public Order(BigDecimal orderNum, String product) {
+	public Order(BigDecimal orderNum) {
+		this.orderNum = orderNum;
+	}
+	
+	public Order(BigDecimal orderNum, Product product) {
 		this.orderNum = orderNum;
 		this.product = product;
 	}
 
-	public Order(BigDecimal orderNum, String product, Date date, String mfr, BigDecimal qty, BigDecimal amount) {
+	public Order(BigDecimal orderNum, Product product, Date date, String mfr, BigDecimal qty, BigDecimal amount) {
 		this.orderNum = orderNum;
 		this.product = product;
 		this.orderDate = date;
@@ -54,11 +62,11 @@ public class Order implements java.io.Serializable {
 		this.orderNum = orderNum;
 	}
 
-	public String getProduct() {
+	public Product getProduct() {
 		return this.product;
 	}
 
-	public void setProduct(String product) {
+	public void setProduct(Product product) {
 		this.product = product;
 	}
 

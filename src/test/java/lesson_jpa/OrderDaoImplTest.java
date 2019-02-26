@@ -1,5 +1,6 @@
 package lesson_jpa;
 
+import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertTrue;
 
 import java.math.BigDecimal;
@@ -20,18 +21,24 @@ public class OrderDaoImplTest {
 	private OrderDao orderDao = new OrderDaoImpl();
 
 	@Test
-	public void test1InsertOrder() throws SQLException {
+	public void test1InsertOrder() {
 		assertTrue(orderDao.insertOrder(INSERT_DELETE_ORDER));
 	}
 
 	@Test
-	public void test2UpdateOrder() throws SQLException {
+	public void test2UpdateOrder() {
 		assertTrue(orderDao.updateOrder(UPDATE_ORDER));
 	}
 
 	@Test
-	public void test3DeleteOrder() throws SQLException {
+	public void test3DeleteOrder() {
 		assertTrue(orderDao.deleteOrder(UPDATE_ORDER.getOrderNum()));
 	}
-
+	
+	@Test
+	public void test21FindOrderById() {
+		Order order = orderDao.findOrderById(BigDecimal.valueOf(112961));
+		System.out.println(order.toString());
+		assertNotNull(orderDao.findOrderById(UPDATE_ORDER.getOrderNum()));
+	}
 }

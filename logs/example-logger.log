@@ -26,3 +26,1110 @@ ERROR | 2019-01-22 21:59:12 | [main] lesson11_calc.Calculator (Calculator.java:1
 | 2019-02-21 22:07:39 | DEBUG | at logging.LoggerProviders(LoggerProviders.java:158) | Logging Provider: org.jboss.logging.Log4j2LoggerProvider | 
 | 2019-02-21 22:07:40 | DEBUG | at lesson_jpa.OrderDaoImpl(OrderDaoImpl.java:36) | persisting Order instance | 
 | 2019-02-21 22:07:40 | DEBUG | at lesson_jpa.OrderDaoImpl(OrderDaoImpl.java:41) | persist successful | 
+| 2019-02-26 19:20:57 | DEBUG | at logging.LoggerProviders(LoggerProviders.java:158) | Logging Provider: org.jboss.logging.Log4j2LoggerProvider | 
+| 2019-02-26 19:20:57 | DEBUG | at lesson_jpa.OrderDaoImpl(OrderDaoImpl.java:36) | persisting Order instance | 
+| 2019-02-26 19:20:57 | DEBUG | at lesson_jpa.OrderDaoImpl(OrderDaoImpl.java:41) | persist successful | 
+| 2019-02-26 19:20:57 | DEBUG | at lesson_jpa.OrderDaoImpl(OrderDaoImpl.java:55) | merging Orders instance | 
+| 2019-02-26 19:20:57 | DEBUG | at lesson_jpa.OrderDaoImpl(OrderDaoImpl.java:60) | merge successful | 
+| 2019-02-26 19:20:57 | DEBUG | at lesson_jpa.OrderDaoImpl(OrderDaoImpl.java:74) | removing Order instance | 
+| 2019-02-26 19:20:58 | ERROR | at lesson_jpa.OrderDaoImpl(OrderDaoImpl.java:86) | remove failed | 
+java.lang.IllegalArgumentException: Entity must be managed to call remove: Order [orderNum=111112, orderDate=null, mfr=null, product=null, qty=null, amount=null], try merging the detached and try the remove again.
+	at org.eclipse.persistence.internal.sessions.UnitOfWorkImpl.performRemove(UnitOfWorkImpl.java:3672) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at org.eclipse.persistence.internal.jpa.EntityManagerImpl.remove(EntityManagerImpl.java:665) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at lesson_jpa.OrderDaoImpl.deleteOrder(OrderDaoImpl.java:77) [classes/:?]
+	at lesson_jpa.OrderDaoImplTest.test3DeleteOrder(OrderDaoImplTest.java:34) [test-classes/:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:566) ~[?:?]
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50) [junit-4.12.jar:4.12]
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12) [junit-4.12.jar:4.12]
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47) [junit-4.12.jar:4.12]
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325) [junit-4.12.jar:4.12]
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78) [junit-4.12.jar:4.12]
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363) [junit-4.12.jar:4.12]
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:89) [.cp/:?]
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:41) [.cp/:?]
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:541) [.cp/:?]
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:763) [.cp/:?]
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:463) [.cp/:?]
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:209) [.cp/:?]
+| 2019-02-26 19:33:17 | DEBUG | at logging.LoggerProviders(LoggerProviders.java:158) | Logging Provider: org.jboss.logging.Log4j2LoggerProvider | 
+| 2019-02-26 19:33:17 | DEBUG | at lesson_jpa.OrderDaoImpl(OrderDaoImpl.java:36) | persisting Order instance | 
+| 2019-02-26 19:33:17 | DEBUG | at lesson_jpa.OrderDaoImpl(OrderDaoImpl.java:55) | merging Orders instance | 
+| 2019-02-26 19:33:17 | DEBUG | at lesson_jpa.OrderDaoImpl(OrderDaoImpl.java:60) | merge successful | 
+| 2019-02-26 19:33:17 | DEBUG | at lesson_jpa.OrderDaoImpl(OrderDaoImpl.java:74) | removing Order instance | 
+| 2019-02-26 19:33:17 | ERROR | at lesson_jpa.OrderDaoImpl(OrderDaoImpl.java:86) | remove failed | 
+java.lang.IllegalArgumentException: Entity must be managed to call remove: Order [orderNum=111112, orderDate=null, mfr=null, product=null, qty=null, amount=null], try merging the detached and try the remove again.
+	at org.eclipse.persistence.internal.sessions.UnitOfWorkImpl.performRemove(UnitOfWorkImpl.java:3672) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at org.eclipse.persistence.internal.jpa.EntityManagerImpl.remove(EntityManagerImpl.java:665) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at lesson_jpa.OrderDaoImpl.deleteOrder(OrderDaoImpl.java:77) [classes/:?]
+	at lesson_jpa.OrderDaoImplTest.test3DeleteOrder(OrderDaoImplTest.java:34) [test-classes/:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:566) ~[?:?]
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50) [junit-4.12.jar:4.12]
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12) [junit-4.12.jar:4.12]
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47) [junit-4.12.jar:4.12]
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325) [junit-4.12.jar:4.12]
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78) [junit-4.12.jar:4.12]
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363) [junit-4.12.jar:4.12]
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:89) [.cp/:?]
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:41) [.cp/:?]
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:541) [.cp/:?]
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:763) [.cp/:?]
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:463) [.cp/:?]
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:209) [.cp/:?]
+| 2019-02-26 19:34:17 | DEBUG | at logging.LoggerProviders(LoggerProviders.java:158) | Logging Provider: org.jboss.logging.Log4j2LoggerProvider | 
+| 2019-02-26 19:34:17 | DEBUG | at lesson_jpa.OrderDaoImpl(OrderDaoImpl.java:36) | persisting Order instance | 
+| 2019-02-26 19:34:17 | DEBUG | at lesson_jpa.OrderDaoImpl(OrderDaoImpl.java:41) | persist successful | 
+| 2019-02-26 19:34:17 | DEBUG | at lesson_jpa.OrderDaoImpl(OrderDaoImpl.java:55) | merging Orders instance | 
+| 2019-02-26 19:34:17 | DEBUG | at lesson_jpa.OrderDaoImpl(OrderDaoImpl.java:60) | merge successful | 
+| 2019-02-26 19:34:17 | DEBUG | at lesson_jpa.OrderDaoImpl(OrderDaoImpl.java:74) | removing Order instance | 
+| 2019-02-26 19:34:17 | ERROR | at lesson_jpa.OrderDaoImpl(OrderDaoImpl.java:86) | remove failed | 
+java.lang.IllegalArgumentException: Entity must be managed to call remove: Order [orderNum=111112, orderDate=null, mfr=null, product=null, qty=null, amount=null], try merging the detached and try the remove again.
+	at org.eclipse.persistence.internal.sessions.UnitOfWorkImpl.performRemove(UnitOfWorkImpl.java:3672) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at org.eclipse.persistence.internal.jpa.EntityManagerImpl.remove(EntityManagerImpl.java:665) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at lesson_jpa.OrderDaoImpl.deleteOrder(OrderDaoImpl.java:77) [classes/:?]
+	at lesson_jpa.OrderDaoImplTest.test3DeleteOrder(OrderDaoImplTest.java:34) [test-classes/:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:566) ~[?:?]
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50) [junit-4.12.jar:4.12]
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12) [junit-4.12.jar:4.12]
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47) [junit-4.12.jar:4.12]
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325) [junit-4.12.jar:4.12]
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78) [junit-4.12.jar:4.12]
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363) [junit-4.12.jar:4.12]
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:89) [.cp/:?]
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:41) [.cp/:?]
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:541) [.cp/:?]
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:763) [.cp/:?]
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:463) [.cp/:?]
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:209) [.cp/:?]
+| 2019-02-26 19:42:30 | DEBUG | at logging.LoggerProviders(LoggerProviders.java:158) | Logging Provider: org.jboss.logging.Log4j2LoggerProvider | 
+| 2019-02-26 19:42:31 | DEBUG | at lesson_jpa.OrderDaoImpl(OrderDaoImpl.java:36) | persisting Order instance | 
+| 2019-02-26 19:42:31 | DEBUG | at lesson_jpa.OrderDaoImpl(OrderDaoImpl.java:41) | persist successful | 
+| 2019-02-26 19:42:31 | DEBUG | at lesson_jpa.OrderDaoImpl(OrderDaoImpl.java:55) | merging Orders instance | 
+| 2019-02-26 19:42:31 | DEBUG | at lesson_jpa.OrderDaoImpl(OrderDaoImpl.java:60) | merge successful | 
+| 2019-02-26 19:42:31 | DEBUG | at lesson_jpa.OrderDaoImpl(OrderDaoImpl.java:74) | removing Order instance | 
+| 2019-02-26 19:42:31 | DEBUG | at lesson_jpa.OrderDaoImpl(OrderDaoImpl.java:79) | remove successful | 
+| 2019-02-26 19:45:55 | DEBUG | at logging.LoggerProviders(LoggerProviders.java:158) | Logging Provider: org.jboss.logging.Log4j2LoggerProvider | 
+| 2019-02-26 19:45:56 | DEBUG | at lesson_jpa.OrderDaoImpl(OrderDaoImpl.java:36) | persisting Order instance | 
+| 2019-02-26 19:45:56 | DEBUG | at lesson_jpa.OrderDaoImpl(OrderDaoImpl.java:41) | persist successful | 
+| 2019-02-26 19:45:56 | DEBUG | at lesson_jpa.OrderDaoImpl(OrderDaoImpl.java:55) | merging Orders instance | 
+| 2019-02-26 19:45:56 | DEBUG | at lesson_jpa.OrderDaoImpl(OrderDaoImpl.java:60) | merge successful | 
+| 2019-02-26 19:45:56 | DEBUG | at lesson_jpa.OrderDaoImpl(OrderDaoImpl.java:74) | removing Order instance | 
+| 2019-02-26 19:45:56 | DEBUG | at lesson_jpa.OrderDaoImpl(OrderDaoImpl.java:79) | remove successful | 
+| 2019-02-26 19:47:21 | DEBUG | at logging.LoggerProviders(LoggerProviders.java:158) | Logging Provider: org.jboss.logging.Log4j2LoggerProvider | 
+| 2019-02-26 19:47:21 | DEBUG | at lesson_jpa.OrderDaoImpl(OrderDaoImpl.java:36) | persisting Order instance | 
+| 2019-02-26 19:47:21 | DEBUG | at lesson_jpa.OrderDaoImpl(OrderDaoImpl.java:41) | persist successful | 
+| 2019-02-26 19:47:21 | DEBUG | at lesson_jpa.OrderDaoImpl(OrderDaoImpl.java:55) | merging Orders instance | 
+| 2019-02-26 19:47:21 | DEBUG | at lesson_jpa.OrderDaoImpl(OrderDaoImpl.java:60) | merge successful | 
+| 2019-02-26 19:47:21 | DEBUG | at lesson_jpa.OrderDaoImpl(OrderDaoImpl.java:74) | removing Order instance | 
+| 2019-02-26 19:47:21 | DEBUG | at lesson_jpa.OrderDaoImpl(OrderDaoImpl.java:79) | remove successful | 
+| 2019-02-26 19:47:58 | DEBUG | at logging.LoggerProviders(LoggerProviders.java:158) | Logging Provider: org.jboss.logging.Log4j2LoggerProvider | 
+| 2019-02-26 19:47:59 | DEBUG | at lesson_jpa.OrderDaoImpl(OrderDaoImpl.java:36) | persisting Order instance | 
+| 2019-02-26 19:47:59 | DEBUG | at lesson_jpa.OrderDaoImpl(OrderDaoImpl.java:41) | persist successful | 
+| 2019-02-26 19:47:59 | DEBUG | at lesson_jpa.OrderDaoImpl(OrderDaoImpl.java:55) | merging Orders instance | 
+| 2019-02-26 19:47:59 | DEBUG | at lesson_jpa.OrderDaoImpl(OrderDaoImpl.java:60) | merge successful | 
+| 2019-02-26 19:47:59 | DEBUG | at lesson_jpa.OrderDaoImpl(OrderDaoImpl.java:74) | removing Order instance | 
+| 2019-02-26 19:47:59 | ERROR | at lesson_jpa.OrderDaoImpl(OrderDaoImpl.java:86) | remove failed | 
+java.lang.IllegalArgumentException: Entity must be managed to call remove: Order [orderNum=111112, orderDate=null, mfr=null, product=null, qty=null, amount=null], try merging the detached and try the remove again.
+	at org.eclipse.persistence.internal.sessions.UnitOfWorkImpl.performRemove(UnitOfWorkImpl.java:3672) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at org.eclipse.persistence.internal.jpa.EntityManagerImpl.remove(EntityManagerImpl.java:665) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at lesson_jpa.OrderDaoImpl.deleteOrder(OrderDaoImpl.java:77) [classes/:?]
+	at lesson_jpa.OrderDaoImplTest.test3DeleteOrder(OrderDaoImplTest.java:34) [test-classes/:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:566) ~[?:?]
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50) [junit-4.12.jar:4.12]
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12) [junit-4.12.jar:4.12]
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47) [junit-4.12.jar:4.12]
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325) [junit-4.12.jar:4.12]
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78) [junit-4.12.jar:4.12]
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363) [junit-4.12.jar:4.12]
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:89) [.cp/:?]
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:41) [.cp/:?]
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:541) [.cp/:?]
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:763) [.cp/:?]
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:463) [.cp/:?]
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:209) [.cp/:?]
+| 2019-02-26 19:52:54 | DEBUG | at logging.LoggerProviders(LoggerProviders.java:158) | Logging Provider: org.jboss.logging.Log4j2LoggerProvider | 
+| 2019-02-26 19:52:54 | DEBUG | at lesson_jpa.OrderDaoImpl(OrderDaoImpl.java:36) | persisting Order instance | 
+| 2019-02-26 19:52:55 | DEBUG | at lesson_jpa.OrderDaoImpl(OrderDaoImpl.java:41) | persist successful | 
+| 2019-02-26 19:52:55 | DEBUG | at lesson_jpa.OrderDaoImpl(OrderDaoImpl.java:55) | merging Orders instance | 
+| 2019-02-26 19:52:55 | DEBUG | at lesson_jpa.OrderDaoImpl(OrderDaoImpl.java:60) | merge successful | 
+| 2019-02-26 19:52:55 | DEBUG | at lesson_jpa.OrderDaoImpl(OrderDaoImpl.java:74) | removing Order instance | 
+| 2019-02-26 19:52:55 | ERROR | at lesson_jpa.OrderDaoImpl(OrderDaoImpl.java:88) | remove failed | 
+java.lang.IllegalArgumentException: Entity must be managed to call remove: Order [orderNum=111112, orderDate=null, mfr=null, product=null, qty=null, amount=null], try merging the detached and try the remove again.
+	at org.eclipse.persistence.internal.sessions.UnitOfWorkImpl.performRemove(UnitOfWorkImpl.java:3672) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at org.eclipse.persistence.internal.jpa.EntityManagerImpl.remove(EntityManagerImpl.java:665) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at lesson_jpa.OrderDaoImpl.deleteOrder(OrderDaoImpl.java:79) [classes/:?]
+	at lesson_jpa.OrderDaoImplTest.test3DeleteOrder(OrderDaoImplTest.java:34) [test-classes/:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:566) ~[?:?]
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50) [junit-4.12.jar:4.12]
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12) [junit-4.12.jar:4.12]
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47) [junit-4.12.jar:4.12]
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325) [junit-4.12.jar:4.12]
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78) [junit-4.12.jar:4.12]
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363) [junit-4.12.jar:4.12]
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:89) [.cp/:?]
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:41) [.cp/:?]
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:541) [.cp/:?]
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:763) [.cp/:?]
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:463) [.cp/:?]
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:209) [.cp/:?]
+| 2019-02-26 19:53:51 | DEBUG | at logging.LoggerProviders(LoggerProviders.java:158) | Logging Provider: org.jboss.logging.Log4j2LoggerProvider | 
+| 2019-02-26 19:53:51 | DEBUG | at lesson_jpa.OrderDaoImpl(OrderDaoImpl.java:36) | persisting Order instance | 
+| 2019-02-26 19:53:51 | DEBUG | at lesson_jpa.OrderDaoImpl(OrderDaoImpl.java:41) | persist successful | 
+| 2019-02-26 19:53:51 | DEBUG | at lesson_jpa.OrderDaoImpl(OrderDaoImpl.java:55) | merging Orders instance | 
+| 2019-02-26 19:53:51 | DEBUG | at lesson_jpa.OrderDaoImpl(OrderDaoImpl.java:60) | merge successful | 
+| 2019-02-26 19:53:51 | DEBUG | at lesson_jpa.OrderDaoImpl(OrderDaoImpl.java:74) | removing Order instance | 
+| 2019-02-26 19:55:26 | DEBUG | at logging.LoggerProviders(LoggerProviders.java:158) | Logging Provider: org.jboss.logging.Log4j2LoggerProvider | 
+| 2019-02-26 19:55:26 | DEBUG | at lesson_jpa.OrderDaoImpl(OrderDaoImpl.java:36) | persisting Order instance | 
+| 2019-02-26 19:55:26 | DEBUG | at lesson_jpa.OrderDaoImpl(OrderDaoImpl.java:41) | persist successful | 
+| 2019-02-26 19:55:26 | DEBUG | at lesson_jpa.OrderDaoImpl(OrderDaoImpl.java:55) | merging Orders instance | 
+| 2019-02-26 19:55:26 | DEBUG | at lesson_jpa.OrderDaoImpl(OrderDaoImpl.java:60) | merge successful | 
+| 2019-02-26 19:55:26 | DEBUG | at lesson_jpa.OrderDaoImpl(OrderDaoImpl.java:74) | removing Order instance | 
+| 2019-02-26 19:55:26 | ERROR | at lesson_jpa.OrderDaoImpl(OrderDaoImpl.java:91) | remove failed | 
+java.lang.IllegalArgumentException: Entity must be managed to call remove: Order [orderNum=111112, orderDate=null, mfr=null, product=null, qty=null, amount=null], try merging the detached and try the remove again.
+	at org.eclipse.persistence.internal.sessions.UnitOfWorkImpl.performRemove(UnitOfWorkImpl.java:3672) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at org.eclipse.persistence.internal.jpa.EntityManagerImpl.remove(EntityManagerImpl.java:665) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at lesson_jpa.OrderDaoImpl.deleteOrder(OrderDaoImpl.java:82) [classes/:?]
+	at lesson_jpa.OrderDaoImplTest.test3DeleteOrder(OrderDaoImplTest.java:34) [test-classes/:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:566) ~[?:?]
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50) [junit-4.12.jar:4.12]
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12) [junit-4.12.jar:4.12]
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47) [junit-4.12.jar:4.12]
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325) [junit-4.12.jar:4.12]
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78) [junit-4.12.jar:4.12]
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363) [junit-4.12.jar:4.12]
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:89) [.cp/:?]
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:41) [.cp/:?]
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:541) [.cp/:?]
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:763) [.cp/:?]
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:463) [.cp/:?]
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:209) [.cp/:?]
+| 2019-02-26 20:15:42 | DEBUG | at logging.LoggerProviders(LoggerProviders.java:158) | Logging Provider: org.jboss.logging.Log4j2LoggerProvider | 
+| 2019-02-26 20:16:13 | DEBUG | at logging.LoggerProviders(LoggerProviders.java:158) | Logging Provider: org.jboss.logging.Log4j2LoggerProvider | 
+| 2019-02-26 20:17:59 | DEBUG | at logging.LoggerProviders(LoggerProviders.java:158) | Logging Provider: org.jboss.logging.Log4j2LoggerProvider | 
+| 2019-02-26 20:20:26 | DEBUG | at logging.LoggerProviders(LoggerProviders.java:158) | Logging Provider: org.jboss.logging.Log4j2LoggerProvider | 
+| 2019-02-26 20:20:26 | DEBUG | at lesson_jpa.OrderDaoImpl(OrderDaoImpl.java:36) | persisting Order instance | 
+| 2019-02-26 20:20:27 | DEBUG | at lesson_jpa.OrderDaoImpl(OrderDaoImpl.java:112) | finding Order by id: 111112 | 
+| 2019-02-26 20:20:27 | DEBUG | at lesson_jpa.OrderDaoImpl(OrderDaoImpl.java:115) | find successful | 
+| 2019-02-26 20:20:27 | DEBUG | at lesson_jpa.OrderDaoImpl(OrderDaoImpl.java:55) | merging Orders instance | 
+| 2019-02-26 20:20:27 | DEBUG | at lesson_jpa.OrderDaoImpl(OrderDaoImpl.java:60) | merge successful | 
+| 2019-02-26 20:20:27 | DEBUG | at lesson_jpa.OrderDaoImpl(OrderDaoImpl.java:74) | removing Order instance | 
+| 2019-02-26 20:20:27 | DEBUG | at lesson_jpa.OrderDaoImpl(OrderDaoImpl.java:79) | remove successful | 
+| 2019-02-26 20:20:46 | DEBUG | at logging.LoggerProviders(LoggerProviders.java:158) | Logging Provider: org.jboss.logging.Log4j2LoggerProvider | 
+| 2019-02-26 20:20:46 | DEBUG | at lesson_jpa.OrderDaoImpl(OrderDaoImpl.java:36) | persisting Order instance | 
+| 2019-02-26 20:20:46 | DEBUG | at lesson_jpa.OrderDaoImpl(OrderDaoImpl.java:41) | persist successful | 
+| 2019-02-26 20:20:46 | DEBUG | at lesson_jpa.OrderDaoImpl(OrderDaoImpl.java:112) | finding Order by id: 111112 | 
+| 2019-02-26 20:20:46 | DEBUG | at lesson_jpa.OrderDaoImpl(OrderDaoImpl.java:115) | find successful | 
+| 2019-02-26 20:20:46 | DEBUG | at lesson_jpa.OrderDaoImpl(OrderDaoImpl.java:55) | merging Orders instance | 
+| 2019-02-26 20:20:46 | DEBUG | at lesson_jpa.OrderDaoImpl(OrderDaoImpl.java:60) | merge successful | 
+| 2019-02-26 20:20:46 | DEBUG | at lesson_jpa.OrderDaoImpl(OrderDaoImpl.java:74) | removing Order instance | 
+| 2019-02-26 20:20:47 | DEBUG | at lesson_jpa.OrderDaoImpl(OrderDaoImpl.java:79) | remove successful | 
+| 2019-02-26 20:31:20 | DEBUG | at logging.LoggerProviders(LoggerProviders.java:158) | Logging Provider: org.jboss.logging.Log4j2LoggerProvider | 
+| 2019-02-26 20:32:55 | DEBUG | at logging.LoggerProviders(LoggerProviders.java:158) | Logging Provider: org.jboss.logging.Log4j2LoggerProvider | 
+| 2019-02-26 20:34:42 | DEBUG | at logging.LoggerProviders(LoggerProviders.java:158) | Logging Provider: org.jboss.logging.Log4j2LoggerProvider | 
+| 2019-02-26 20:34:43 | DEBUG | at lesson_jpa.OrderDaoImpl(OrderDaoImpl.java:36) | persisting Order instance | 
+| 2019-02-26 20:34:43 | DEBUG | at lesson_jpa.OrderDaoImpl(OrderDaoImpl.java:112) | finding Order by id: 111112 | 
+| 2019-02-26 20:34:43 | ERROR | at lesson_jpa.OrderDaoImpl(OrderDaoImpl.java:118) | find failed | 
+org.eclipse.persistence.exceptions.DatabaseException: 
+Internal Exception: java.sql.SQLSyntaxErrorException: ORA-00904: "PRODUCT_PRODUCT_ID": invalid identifier
+
+Error Code: 904
+Call: SELECT ORDER_NUM, AMOUNT, MFR, ORDER_DATE, QTY, PRODUCT_PRODUCT_ID FROM MA_STUDENT.ORDERS WHERE (ORDER_NUM = ?)
+	bind => [1 parameter bound]
+Query: ReadObjectQuery(name="readOrder" referenceClass=Order sql="SELECT ORDER_NUM, AMOUNT, MFR, ORDER_DATE, QTY, PRODUCT_PRODUCT_ID FROM MA_STUDENT.ORDERS WHERE (ORDER_NUM = ?)")
+	at org.eclipse.persistence.exceptions.DatabaseException.sqlException(DatabaseException.java:342) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at org.eclipse.persistence.internal.databaseaccess.DatabaseAccessor.basicExecuteCall(DatabaseAccessor.java:691) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at org.eclipse.persistence.internal.databaseaccess.DatabaseAccessor.executeCall(DatabaseAccessor.java:567) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at org.eclipse.persistence.internal.sessions.AbstractSession.basicExecuteCall(AbstractSession.java:2096) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at org.eclipse.persistence.sessions.server.ServerSession.executeCall(ServerSession.java:603) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at org.eclipse.persistence.internal.queries.DatasourceCallQueryMechanism.executeCall(DatasourceCallQueryMechanism.java:275) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at org.eclipse.persistence.internal.queries.DatasourceCallQueryMechanism.executeCall(DatasourceCallQueryMechanism.java:261) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at org.eclipse.persistence.internal.queries.DatasourceCallQueryMechanism.selectOneRow(DatasourceCallQueryMechanism.java:748) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at org.eclipse.persistence.internal.queries.ExpressionQueryMechanism.selectOneRowFromTable(ExpressionQueryMechanism.java:2836) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at org.eclipse.persistence.internal.queries.ExpressionQueryMechanism.selectOneRow(ExpressionQueryMechanism.java:2789) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at org.eclipse.persistence.queries.ReadObjectQuery.executeObjectLevelReadQuery(ReadObjectQuery.java:561) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at org.eclipse.persistence.queries.ObjectLevelReadQuery.executeDatabaseQuery(ObjectLevelReadQuery.java:1224) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at org.eclipse.persistence.queries.DatabaseQuery.execute(DatabaseQuery.java:914) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at org.eclipse.persistence.queries.ObjectLevelReadQuery.execute(ObjectLevelReadQuery.java:1183) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at org.eclipse.persistence.queries.ReadObjectQuery.execute(ReadObjectQuery.java:447) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at org.eclipse.persistence.queries.ObjectLevelReadQuery.executeInUnitOfWork(ObjectLevelReadQuery.java:1271) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at org.eclipse.persistence.internal.sessions.UnitOfWorkImpl.internalExecuteQuery(UnitOfWorkImpl.java:2981) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at org.eclipse.persistence.internal.sessions.AbstractSession.executeQuery(AbstractSession.java:1895) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at org.eclipse.persistence.internal.sessions.AbstractSession.executeQuery(AbstractSession.java:1877) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at org.eclipse.persistence.internal.sessions.AbstractSession.executeQuery(AbstractSession.java:1827) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at org.eclipse.persistence.internal.jpa.EntityManagerImpl.executeQuery(EntityManagerImpl.java:1007) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at org.eclipse.persistence.internal.jpa.EntityManagerImpl.findInternal(EntityManagerImpl.java:949) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at org.eclipse.persistence.internal.jpa.EntityManagerImpl.find(EntityManagerImpl.java:825) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at org.eclipse.persistence.internal.jpa.EntityManagerImpl.find(EntityManagerImpl.java:691) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at lesson_jpa.OrderDaoImpl.findOrderById(OrderDaoImpl.java:114) [classes/:?]
+	at lesson_jpa.OrderDaoImplTest.test21FindOrderById(OrderDaoImplTest.java:40) [test-classes/:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:566) ~[?:?]
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50) [junit-4.12.jar:4.12]
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12) [junit-4.12.jar:4.12]
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47) [junit-4.12.jar:4.12]
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325) [junit-4.12.jar:4.12]
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78) [junit-4.12.jar:4.12]
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363) [junit-4.12.jar:4.12]
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:89) [.cp/:?]
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:41) [.cp/:?]
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:541) [.cp/:?]
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:763) [.cp/:?]
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:463) [.cp/:?]
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:209) [.cp/:?]
+Caused by: java.sql.SQLSyntaxErrorException: ORA-00904: "PRODUCT_PRODUCT_ID": invalid identifier
+
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:450) ~[ojdbc7.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:399) ~[ojdbc7.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1017) ~[ojdbc7.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:655) ~[ojdbc7.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:249) ~[ojdbc7.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:566) ~[ojdbc7.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:215) ~[ojdbc7.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:58) ~[ojdbc7.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.T4CPreparedStatement.executeForDescribe(T4CPreparedStatement.java:776) ~[ojdbc7.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.OracleStatement.executeMaybeDescribe(OracleStatement.java:897) ~[ojdbc7.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1034) ~[ojdbc7.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.OraclePreparedStatement.executeInternal(OraclePreparedStatement.java:3820) ~[ojdbc7.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.OraclePreparedStatement.executeQuery(OraclePreparedStatement.java:3867) ~[ojdbc7.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.OraclePreparedStatementWrapper.executeQuery(OraclePreparedStatementWrapper.java:1502) ~[ojdbc7.jar:12.1.0.1.0]
+	at org.eclipse.persistence.internal.databaseaccess.DatabaseAccessor.executeSelect(DatabaseAccessor.java:1015) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at org.eclipse.persistence.internal.databaseaccess.DatabaseAccessor.basicExecuteCall(DatabaseAccessor.java:651) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	... 47 more
+| 2019-02-26 20:34:43 | DEBUG | at lesson_jpa.OrderDaoImpl(OrderDaoImpl.java:55) | merging Orders instance | 
+| 2019-02-26 20:34:43 | ERROR | at lesson_jpa.OrderDaoImpl(OrderDaoImpl.java:67) | merge failed | 
+org.eclipse.persistence.exceptions.DatabaseException: 
+Internal Exception: java.sql.SQLSyntaxErrorException: ORA-00904: "PRODUCT_PRODUCT_ID": invalid identifier
+
+Error Code: 904
+Call: SELECT ORDER_NUM, AMOUNT, MFR, ORDER_DATE, QTY, PRODUCT_PRODUCT_ID FROM MA_STUDENT.ORDERS WHERE (ORDER_NUM = ?)
+	bind => [1 parameter bound]
+Query: ReadObjectQuery(referenceClass=Order )
+	at org.eclipse.persistence.exceptions.DatabaseException.sqlException(DatabaseException.java:342) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at org.eclipse.persistence.internal.databaseaccess.DatabaseAccessor.basicExecuteCall(DatabaseAccessor.java:691) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at org.eclipse.persistence.internal.databaseaccess.DatabaseAccessor.executeCall(DatabaseAccessor.java:567) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at org.eclipse.persistence.internal.sessions.AbstractSession.basicExecuteCall(AbstractSession.java:2096) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at org.eclipse.persistence.sessions.server.ServerSession.executeCall(ServerSession.java:603) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at org.eclipse.persistence.internal.queries.DatasourceCallQueryMechanism.executeCall(DatasourceCallQueryMechanism.java:275) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at org.eclipse.persistence.internal.queries.DatasourceCallQueryMechanism.executeCall(DatasourceCallQueryMechanism.java:261) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at org.eclipse.persistence.internal.queries.DatasourceCallQueryMechanism.selectOneRow(DatasourceCallQueryMechanism.java:748) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at org.eclipse.persistence.internal.queries.ExpressionQueryMechanism.selectOneRowFromTable(ExpressionQueryMechanism.java:2836) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at org.eclipse.persistence.internal.queries.ExpressionQueryMechanism.selectOneRow(ExpressionQueryMechanism.java:2789) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at org.eclipse.persistence.queries.ReadObjectQuery.executeObjectLevelReadQuery(ReadObjectQuery.java:561) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at org.eclipse.persistence.queries.ObjectLevelReadQuery.executeDatabaseQuery(ObjectLevelReadQuery.java:1224) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at org.eclipse.persistence.queries.DatabaseQuery.execute(DatabaseQuery.java:914) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at org.eclipse.persistence.queries.ObjectLevelReadQuery.execute(ObjectLevelReadQuery.java:1183) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at org.eclipse.persistence.queries.ReadObjectQuery.execute(ReadObjectQuery.java:447) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at org.eclipse.persistence.queries.ObjectLevelReadQuery.executeInUnitOfWork(ObjectLevelReadQuery.java:1271) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at org.eclipse.persistence.internal.sessions.UnitOfWorkImpl.internalExecuteQuery(UnitOfWorkImpl.java:2981) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at org.eclipse.persistence.internal.sessions.AbstractSession.executeQuery(AbstractSession.java:1895) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at org.eclipse.persistence.internal.sessions.AbstractSession.executeQuery(AbstractSession.java:1877) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at org.eclipse.persistence.internal.sessions.AbstractSession.executeQuery(AbstractSession.java:1827) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at org.eclipse.persistence.internal.sessions.AbstractSession.readObject(AbstractSession.java:3821) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at org.eclipse.persistence.internal.sessions.MergeManager.registerObjectForMergeCloneIntoWorkingCopy(MergeManager.java:1108) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at org.eclipse.persistence.internal.sessions.MergeManager.mergeChangesOfCloneIntoWorkingCopy(MergeManager.java:575) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at org.eclipse.persistence.internal.sessions.MergeManager.mergeChanges(MergeManager.java:324) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at org.eclipse.persistence.internal.sessions.UnitOfWorkImpl.mergeCloneWithReferences(UnitOfWorkImpl.java:3614) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at org.eclipse.persistence.internal.sessions.RepeatableWriteUnitOfWork.mergeCloneWithReferences(RepeatableWriteUnitOfWork.java:389) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at org.eclipse.persistence.internal.sessions.UnitOfWorkImpl.mergeCloneWithReferences(UnitOfWorkImpl.java:3574) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at org.eclipse.persistence.internal.jpa.EntityManagerImpl.mergeInternal(EntityManagerImpl.java:643) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at org.eclipse.persistence.internal.jpa.EntityManagerImpl.merge(EntityManagerImpl.java:620) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at lesson_jpa.OrderDaoImpl.updateOrder(OrderDaoImpl.java:58) [classes/:?]
+	at lesson_jpa.OrderDaoImplTest.test2UpdateOrder(OrderDaoImplTest.java:30) [test-classes/:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:566) ~[?:?]
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50) [junit-4.12.jar:4.12]
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12) [junit-4.12.jar:4.12]
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47) [junit-4.12.jar:4.12]
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325) [junit-4.12.jar:4.12]
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78) [junit-4.12.jar:4.12]
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363) [junit-4.12.jar:4.12]
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:89) [.cp/:?]
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:41) [.cp/:?]
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:541) [.cp/:?]
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:763) [.cp/:?]
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:463) [.cp/:?]
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:209) [.cp/:?]
+Caused by: java.sql.SQLSyntaxErrorException: ORA-00904: "PRODUCT_PRODUCT_ID": invalid identifier
+
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:450) ~[ojdbc7.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:399) ~[ojdbc7.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1017) ~[ojdbc7.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:655) ~[ojdbc7.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:249) ~[ojdbc7.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:566) ~[ojdbc7.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:215) ~[ojdbc7.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:58) ~[ojdbc7.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.T4CPreparedStatement.executeForDescribe(T4CPreparedStatement.java:776) ~[ojdbc7.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.OracleStatement.executeMaybeDescribe(OracleStatement.java:897) ~[ojdbc7.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1034) ~[ojdbc7.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.OraclePreparedStatement.executeInternal(OraclePreparedStatement.java:3820) ~[ojdbc7.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.OraclePreparedStatement.executeQuery(OraclePreparedStatement.java:3867) ~[ojdbc7.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.OraclePreparedStatementWrapper.executeQuery(OraclePreparedStatementWrapper.java:1502) ~[ojdbc7.jar:12.1.0.1.0]
+	at org.eclipse.persistence.internal.databaseaccess.DatabaseAccessor.executeSelect(DatabaseAccessor.java:1015) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at org.eclipse.persistence.internal.databaseaccess.DatabaseAccessor.basicExecuteCall(DatabaseAccessor.java:651) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	... 52 more
+| 2019-02-26 20:34:43 | DEBUG | at lesson_jpa.OrderDaoImpl(OrderDaoImpl.java:74) | removing Order instance | 
+| 2019-02-26 20:34:43 | ERROR | at lesson_jpa.OrderDaoImpl(OrderDaoImpl.java:86) | remove failed | 
+org.eclipse.persistence.exceptions.DatabaseException: 
+Internal Exception: java.sql.SQLSyntaxErrorException: ORA-00904: "PRODUCT_PRODUCT_ID": invalid identifier
+
+Error Code: 904
+Call: SELECT ORDER_NUM, AMOUNT, MFR, ORDER_DATE, QTY, PRODUCT_PRODUCT_ID FROM MA_STUDENT.ORDERS WHERE (ORDER_NUM = ?)
+	bind => [1 parameter bound]
+Query: ReadObjectQuery(name="readOrder" referenceClass=Order sql="SELECT ORDER_NUM, AMOUNT, MFR, ORDER_DATE, QTY, PRODUCT_PRODUCT_ID FROM MA_STUDENT.ORDERS WHERE (ORDER_NUM = ?)")
+	at org.eclipse.persistence.exceptions.DatabaseException.sqlException(DatabaseException.java:342) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at org.eclipse.persistence.internal.databaseaccess.DatabaseAccessor.basicExecuteCall(DatabaseAccessor.java:691) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at org.eclipse.persistence.internal.databaseaccess.DatabaseAccessor.executeCall(DatabaseAccessor.java:567) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at org.eclipse.persistence.internal.sessions.AbstractSession.basicExecuteCall(AbstractSession.java:2096) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at org.eclipse.persistence.sessions.server.ServerSession.executeCall(ServerSession.java:603) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at org.eclipse.persistence.internal.queries.DatasourceCallQueryMechanism.executeCall(DatasourceCallQueryMechanism.java:275) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at org.eclipse.persistence.internal.queries.DatasourceCallQueryMechanism.executeCall(DatasourceCallQueryMechanism.java:261) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at org.eclipse.persistence.internal.queries.DatasourceCallQueryMechanism.selectOneRow(DatasourceCallQueryMechanism.java:748) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at org.eclipse.persistence.internal.queries.ExpressionQueryMechanism.selectOneRowFromTable(ExpressionQueryMechanism.java:2836) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at org.eclipse.persistence.internal.queries.ExpressionQueryMechanism.selectOneRow(ExpressionQueryMechanism.java:2789) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at org.eclipse.persistence.queries.ReadObjectQuery.executeObjectLevelReadQuery(ReadObjectQuery.java:561) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at org.eclipse.persistence.queries.ObjectLevelReadQuery.executeDatabaseQuery(ObjectLevelReadQuery.java:1224) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at org.eclipse.persistence.queries.DatabaseQuery.execute(DatabaseQuery.java:914) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at org.eclipse.persistence.queries.ObjectLevelReadQuery.execute(ObjectLevelReadQuery.java:1183) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at org.eclipse.persistence.queries.ReadObjectQuery.execute(ReadObjectQuery.java:447) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at org.eclipse.persistence.queries.ObjectLevelReadQuery.executeInUnitOfWork(ObjectLevelReadQuery.java:1271) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at org.eclipse.persistence.internal.sessions.UnitOfWorkImpl.internalExecuteQuery(UnitOfWorkImpl.java:2981) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at org.eclipse.persistence.internal.sessions.AbstractSession.executeQuery(AbstractSession.java:1895) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at org.eclipse.persistence.internal.sessions.AbstractSession.executeQuery(AbstractSession.java:1877) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at org.eclipse.persistence.internal.sessions.AbstractSession.executeQuery(AbstractSession.java:1827) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at org.eclipse.persistence.internal.jpa.EntityManagerImpl.executeQuery(EntityManagerImpl.java:1007) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at org.eclipse.persistence.internal.jpa.EntityManagerImpl.findInternal(EntityManagerImpl.java:949) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at org.eclipse.persistence.internal.jpa.EntityManagerImpl.find(EntityManagerImpl.java:825) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at org.eclipse.persistence.internal.jpa.EntityManagerImpl.find(EntityManagerImpl.java:691) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at lesson_jpa.OrderDaoImpl.deleteOrder(OrderDaoImpl.java:77) [classes/:?]
+	at lesson_jpa.OrderDaoImplTest.test3DeleteOrder(OrderDaoImplTest.java:35) [test-classes/:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:566) ~[?:?]
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50) [junit-4.12.jar:4.12]
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12) [junit-4.12.jar:4.12]
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47) [junit-4.12.jar:4.12]
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325) [junit-4.12.jar:4.12]
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78) [junit-4.12.jar:4.12]
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363) [junit-4.12.jar:4.12]
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:89) [.cp/:?]
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:41) [.cp/:?]
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:541) [.cp/:?]
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:763) [.cp/:?]
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:463) [.cp/:?]
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:209) [.cp/:?]
+Caused by: java.sql.SQLSyntaxErrorException: ORA-00904: "PRODUCT_PRODUCT_ID": invalid identifier
+
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:450) ~[ojdbc7.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:399) ~[ojdbc7.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1017) ~[ojdbc7.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:655) ~[ojdbc7.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:249) ~[ojdbc7.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:566) ~[ojdbc7.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:215) ~[ojdbc7.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:58) ~[ojdbc7.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.T4CPreparedStatement.executeForDescribe(T4CPreparedStatement.java:776) ~[ojdbc7.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.OracleStatement.executeMaybeDescribe(OracleStatement.java:897) ~[ojdbc7.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1034) ~[ojdbc7.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.OraclePreparedStatement.executeInternal(OraclePreparedStatement.java:3820) ~[ojdbc7.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.OraclePreparedStatement.executeQuery(OraclePreparedStatement.java:3867) ~[ojdbc7.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.OraclePreparedStatementWrapper.executeQuery(OraclePreparedStatementWrapper.java:1502) ~[ojdbc7.jar:12.1.0.1.0]
+	at org.eclipse.persistence.internal.databaseaccess.DatabaseAccessor.executeSelect(DatabaseAccessor.java:1015) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at org.eclipse.persistence.internal.databaseaccess.DatabaseAccessor.basicExecuteCall(DatabaseAccessor.java:651) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	... 47 more
+| 2019-02-26 20:37:56 | DEBUG | at logging.LoggerProviders(LoggerProviders.java:158) | Logging Provider: org.jboss.logging.Log4j2LoggerProvider | 
+| 2019-02-26 20:37:57 | DEBUG | at lesson_jpa.OrderDaoImpl(OrderDaoImpl.java:36) | persisting Order instance | 
+| 2019-02-26 20:37:57 | DEBUG | at lesson_jpa.OrderDaoImpl(OrderDaoImpl.java:41) | persist successful | 
+| 2019-02-26 20:37:57 | DEBUG | at lesson_jpa.OrderDaoImpl(OrderDaoImpl.java:112) | finding Order by id: 111112 | 
+| 2019-02-26 20:37:57 | DEBUG | at lesson_jpa.OrderDaoImpl(OrderDaoImpl.java:115) | find successful | 
+| 2019-02-26 20:37:57 | DEBUG | at lesson_jpa.OrderDaoImpl(OrderDaoImpl.java:55) | merging Orders instance | 
+| 2019-02-26 20:37:57 | DEBUG | at lesson_jpa.OrderDaoImpl(OrderDaoImpl.java:60) | merge successful | 
+| 2019-02-26 20:37:57 | DEBUG | at lesson_jpa.OrderDaoImpl(OrderDaoImpl.java:74) | removing Order instance | 
+| 2019-02-26 20:37:57 | DEBUG | at lesson_jpa.OrderDaoImpl(OrderDaoImpl.java:79) | remove successful | 
+| 2019-02-26 20:39:30 | DEBUG | at logging.LoggerProviders(LoggerProviders.java:158) | Logging Provider: org.jboss.logging.Log4j2LoggerProvider | 
+| 2019-02-26 20:39:31 | DEBUG | at lesson_jpa.OrderDaoImpl(OrderDaoImpl.java:36) | persisting Order instance | 
+| 2019-02-26 20:39:31 | DEBUG | at lesson_jpa.OrderDaoImpl(OrderDaoImpl.java:112) | finding Order by id: 111112 | 
+| 2019-02-26 20:39:31 | ERROR | at lesson_jpa.OrderDaoImpl(OrderDaoImpl.java:118) | find failed | 
+org.eclipse.persistence.exceptions.DatabaseException: 
+Internal Exception: java.sql.SQLSyntaxErrorException: ORA-00904: "PRODUCTS": invalid identifier
+
+Error Code: 904
+Call: SELECT ORDER_NUM, AMOUNT, MFR, ORDER_DATE, QTY, PRODUCTS FROM MA_STUDENT.ORDERS WHERE (ORDER_NUM = ?)
+	bind => [1 parameter bound]
+Query: ReadObjectQuery(name="readOrder" referenceClass=Order sql="SELECT ORDER_NUM, AMOUNT, MFR, ORDER_DATE, QTY, PRODUCTS FROM MA_STUDENT.ORDERS WHERE (ORDER_NUM = ?)")
+	at org.eclipse.persistence.exceptions.DatabaseException.sqlException(DatabaseException.java:342) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at org.eclipse.persistence.internal.databaseaccess.DatabaseAccessor.basicExecuteCall(DatabaseAccessor.java:691) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at org.eclipse.persistence.internal.databaseaccess.DatabaseAccessor.executeCall(DatabaseAccessor.java:567) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at org.eclipse.persistence.internal.sessions.AbstractSession.basicExecuteCall(AbstractSession.java:2096) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at org.eclipse.persistence.sessions.server.ServerSession.executeCall(ServerSession.java:603) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at org.eclipse.persistence.internal.queries.DatasourceCallQueryMechanism.executeCall(DatasourceCallQueryMechanism.java:275) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at org.eclipse.persistence.internal.queries.DatasourceCallQueryMechanism.executeCall(DatasourceCallQueryMechanism.java:261) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at org.eclipse.persistence.internal.queries.DatasourceCallQueryMechanism.selectOneRow(DatasourceCallQueryMechanism.java:748) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at org.eclipse.persistence.internal.queries.ExpressionQueryMechanism.selectOneRowFromTable(ExpressionQueryMechanism.java:2836) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at org.eclipse.persistence.internal.queries.ExpressionQueryMechanism.selectOneRow(ExpressionQueryMechanism.java:2789) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at org.eclipse.persistence.queries.ReadObjectQuery.executeObjectLevelReadQuery(ReadObjectQuery.java:561) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at org.eclipse.persistence.queries.ObjectLevelReadQuery.executeDatabaseQuery(ObjectLevelReadQuery.java:1224) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at org.eclipse.persistence.queries.DatabaseQuery.execute(DatabaseQuery.java:914) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at org.eclipse.persistence.queries.ObjectLevelReadQuery.execute(ObjectLevelReadQuery.java:1183) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at org.eclipse.persistence.queries.ReadObjectQuery.execute(ReadObjectQuery.java:447) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at org.eclipse.persistence.queries.ObjectLevelReadQuery.executeInUnitOfWork(ObjectLevelReadQuery.java:1271) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at org.eclipse.persistence.internal.sessions.UnitOfWorkImpl.internalExecuteQuery(UnitOfWorkImpl.java:2981) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at org.eclipse.persistence.internal.sessions.AbstractSession.executeQuery(AbstractSession.java:1895) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at org.eclipse.persistence.internal.sessions.AbstractSession.executeQuery(AbstractSession.java:1877) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at org.eclipse.persistence.internal.sessions.AbstractSession.executeQuery(AbstractSession.java:1827) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at org.eclipse.persistence.internal.jpa.EntityManagerImpl.executeQuery(EntityManagerImpl.java:1007) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at org.eclipse.persistence.internal.jpa.EntityManagerImpl.findInternal(EntityManagerImpl.java:949) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at org.eclipse.persistence.internal.jpa.EntityManagerImpl.find(EntityManagerImpl.java:825) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at org.eclipse.persistence.internal.jpa.EntityManagerImpl.find(EntityManagerImpl.java:691) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at lesson_jpa.OrderDaoImpl.findOrderById(OrderDaoImpl.java:114) [classes/:?]
+	at lesson_jpa.OrderDaoImplTest.test21FindOrderById(OrderDaoImplTest.java:40) [test-classes/:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:566) ~[?:?]
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50) [junit-4.12.jar:4.12]
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12) [junit-4.12.jar:4.12]
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47) [junit-4.12.jar:4.12]
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325) [junit-4.12.jar:4.12]
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78) [junit-4.12.jar:4.12]
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363) [junit-4.12.jar:4.12]
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:89) [.cp/:?]
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:41) [.cp/:?]
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:541) [.cp/:?]
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:763) [.cp/:?]
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:463) [.cp/:?]
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:209) [.cp/:?]
+Caused by: java.sql.SQLSyntaxErrorException: ORA-00904: "PRODUCTS": invalid identifier
+
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:450) ~[ojdbc7.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:399) ~[ojdbc7.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1017) ~[ojdbc7.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:655) ~[ojdbc7.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:249) ~[ojdbc7.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:566) ~[ojdbc7.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:215) ~[ojdbc7.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:58) ~[ojdbc7.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.T4CPreparedStatement.executeForDescribe(T4CPreparedStatement.java:776) ~[ojdbc7.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.OracleStatement.executeMaybeDescribe(OracleStatement.java:897) ~[ojdbc7.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1034) ~[ojdbc7.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.OraclePreparedStatement.executeInternal(OraclePreparedStatement.java:3820) ~[ojdbc7.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.OraclePreparedStatement.executeQuery(OraclePreparedStatement.java:3867) ~[ojdbc7.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.OraclePreparedStatementWrapper.executeQuery(OraclePreparedStatementWrapper.java:1502) ~[ojdbc7.jar:12.1.0.1.0]
+	at org.eclipse.persistence.internal.databaseaccess.DatabaseAccessor.executeSelect(DatabaseAccessor.java:1015) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at org.eclipse.persistence.internal.databaseaccess.DatabaseAccessor.basicExecuteCall(DatabaseAccessor.java:651) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	... 47 more
+| 2019-02-26 20:39:31 | DEBUG | at lesson_jpa.OrderDaoImpl(OrderDaoImpl.java:55) | merging Orders instance | 
+| 2019-02-26 20:39:31 | ERROR | at lesson_jpa.OrderDaoImpl(OrderDaoImpl.java:67) | merge failed | 
+org.eclipse.persistence.exceptions.DatabaseException: 
+Internal Exception: java.sql.SQLSyntaxErrorException: ORA-00904: "PRODUCTS": invalid identifier
+
+Error Code: 904
+Call: SELECT ORDER_NUM, AMOUNT, MFR, ORDER_DATE, QTY, PRODUCTS FROM MA_STUDENT.ORDERS WHERE (ORDER_NUM = ?)
+	bind => [1 parameter bound]
+Query: ReadObjectQuery(referenceClass=Order )
+	at org.eclipse.persistence.exceptions.DatabaseException.sqlException(DatabaseException.java:342) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at org.eclipse.persistence.internal.databaseaccess.DatabaseAccessor.basicExecuteCall(DatabaseAccessor.java:691) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at org.eclipse.persistence.internal.databaseaccess.DatabaseAccessor.executeCall(DatabaseAccessor.java:567) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at org.eclipse.persistence.internal.sessions.AbstractSession.basicExecuteCall(AbstractSession.java:2096) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at org.eclipse.persistence.sessions.server.ServerSession.executeCall(ServerSession.java:603) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at org.eclipse.persistence.internal.queries.DatasourceCallQueryMechanism.executeCall(DatasourceCallQueryMechanism.java:275) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at org.eclipse.persistence.internal.queries.DatasourceCallQueryMechanism.executeCall(DatasourceCallQueryMechanism.java:261) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at org.eclipse.persistence.internal.queries.DatasourceCallQueryMechanism.selectOneRow(DatasourceCallQueryMechanism.java:748) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at org.eclipse.persistence.internal.queries.ExpressionQueryMechanism.selectOneRowFromTable(ExpressionQueryMechanism.java:2836) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at org.eclipse.persistence.internal.queries.ExpressionQueryMechanism.selectOneRow(ExpressionQueryMechanism.java:2789) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at org.eclipse.persistence.queries.ReadObjectQuery.executeObjectLevelReadQuery(ReadObjectQuery.java:561) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at org.eclipse.persistence.queries.ObjectLevelReadQuery.executeDatabaseQuery(ObjectLevelReadQuery.java:1224) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at org.eclipse.persistence.queries.DatabaseQuery.execute(DatabaseQuery.java:914) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at org.eclipse.persistence.queries.ObjectLevelReadQuery.execute(ObjectLevelReadQuery.java:1183) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at org.eclipse.persistence.queries.ReadObjectQuery.execute(ReadObjectQuery.java:447) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at org.eclipse.persistence.queries.ObjectLevelReadQuery.executeInUnitOfWork(ObjectLevelReadQuery.java:1271) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at org.eclipse.persistence.internal.sessions.UnitOfWorkImpl.internalExecuteQuery(UnitOfWorkImpl.java:2981) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at org.eclipse.persistence.internal.sessions.AbstractSession.executeQuery(AbstractSession.java:1895) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at org.eclipse.persistence.internal.sessions.AbstractSession.executeQuery(AbstractSession.java:1877) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at org.eclipse.persistence.internal.sessions.AbstractSession.executeQuery(AbstractSession.java:1827) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at org.eclipse.persistence.internal.sessions.AbstractSession.readObject(AbstractSession.java:3821) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at org.eclipse.persistence.internal.sessions.MergeManager.registerObjectForMergeCloneIntoWorkingCopy(MergeManager.java:1108) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at org.eclipse.persistence.internal.sessions.MergeManager.mergeChangesOfCloneIntoWorkingCopy(MergeManager.java:575) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at org.eclipse.persistence.internal.sessions.MergeManager.mergeChanges(MergeManager.java:324) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at org.eclipse.persistence.internal.sessions.UnitOfWorkImpl.mergeCloneWithReferences(UnitOfWorkImpl.java:3614) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at org.eclipse.persistence.internal.sessions.RepeatableWriteUnitOfWork.mergeCloneWithReferences(RepeatableWriteUnitOfWork.java:389) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at org.eclipse.persistence.internal.sessions.UnitOfWorkImpl.mergeCloneWithReferences(UnitOfWorkImpl.java:3574) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at org.eclipse.persistence.internal.jpa.EntityManagerImpl.mergeInternal(EntityManagerImpl.java:643) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at org.eclipse.persistence.internal.jpa.EntityManagerImpl.merge(EntityManagerImpl.java:620) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at lesson_jpa.OrderDaoImpl.updateOrder(OrderDaoImpl.java:58) [classes/:?]
+	at lesson_jpa.OrderDaoImplTest.test2UpdateOrder(OrderDaoImplTest.java:30) [test-classes/:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:566) ~[?:?]
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50) [junit-4.12.jar:4.12]
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12) [junit-4.12.jar:4.12]
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47) [junit-4.12.jar:4.12]
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325) [junit-4.12.jar:4.12]
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78) [junit-4.12.jar:4.12]
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363) [junit-4.12.jar:4.12]
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:89) [.cp/:?]
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:41) [.cp/:?]
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:541) [.cp/:?]
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:763) [.cp/:?]
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:463) [.cp/:?]
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:209) [.cp/:?]
+Caused by: java.sql.SQLSyntaxErrorException: ORA-00904: "PRODUCTS": invalid identifier
+
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:450) ~[ojdbc7.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:399) ~[ojdbc7.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1017) ~[ojdbc7.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:655) ~[ojdbc7.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:249) ~[ojdbc7.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:566) ~[ojdbc7.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:215) ~[ojdbc7.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:58) ~[ojdbc7.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.T4CPreparedStatement.executeForDescribe(T4CPreparedStatement.java:776) ~[ojdbc7.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.OracleStatement.executeMaybeDescribe(OracleStatement.java:897) ~[ojdbc7.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1034) ~[ojdbc7.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.OraclePreparedStatement.executeInternal(OraclePreparedStatement.java:3820) ~[ojdbc7.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.OraclePreparedStatement.executeQuery(OraclePreparedStatement.java:3867) ~[ojdbc7.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.OraclePreparedStatementWrapper.executeQuery(OraclePreparedStatementWrapper.java:1502) ~[ojdbc7.jar:12.1.0.1.0]
+	at org.eclipse.persistence.internal.databaseaccess.DatabaseAccessor.executeSelect(DatabaseAccessor.java:1015) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at org.eclipse.persistence.internal.databaseaccess.DatabaseAccessor.basicExecuteCall(DatabaseAccessor.java:651) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	... 52 more
+| 2019-02-26 20:39:31 | DEBUG | at lesson_jpa.OrderDaoImpl(OrderDaoImpl.java:74) | removing Order instance | 
+| 2019-02-26 20:39:31 | ERROR | at lesson_jpa.OrderDaoImpl(OrderDaoImpl.java:86) | remove failed | 
+org.eclipse.persistence.exceptions.DatabaseException: 
+Internal Exception: java.sql.SQLSyntaxErrorException: ORA-00904: "PRODUCTS": invalid identifier
+
+Error Code: 904
+Call: SELECT ORDER_NUM, AMOUNT, MFR, ORDER_DATE, QTY, PRODUCTS FROM MA_STUDENT.ORDERS WHERE (ORDER_NUM = ?)
+	bind => [1 parameter bound]
+Query: ReadObjectQuery(name="readOrder" referenceClass=Order sql="SELECT ORDER_NUM, AMOUNT, MFR, ORDER_DATE, QTY, PRODUCTS FROM MA_STUDENT.ORDERS WHERE (ORDER_NUM = ?)")
+	at org.eclipse.persistence.exceptions.DatabaseException.sqlException(DatabaseException.java:342) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at org.eclipse.persistence.internal.databaseaccess.DatabaseAccessor.basicExecuteCall(DatabaseAccessor.java:691) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at org.eclipse.persistence.internal.databaseaccess.DatabaseAccessor.executeCall(DatabaseAccessor.java:567) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at org.eclipse.persistence.internal.sessions.AbstractSession.basicExecuteCall(AbstractSession.java:2096) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at org.eclipse.persistence.sessions.server.ServerSession.executeCall(ServerSession.java:603) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at org.eclipse.persistence.internal.queries.DatasourceCallQueryMechanism.executeCall(DatasourceCallQueryMechanism.java:275) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at org.eclipse.persistence.internal.queries.DatasourceCallQueryMechanism.executeCall(DatasourceCallQueryMechanism.java:261) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at org.eclipse.persistence.internal.queries.DatasourceCallQueryMechanism.selectOneRow(DatasourceCallQueryMechanism.java:748) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at org.eclipse.persistence.internal.queries.ExpressionQueryMechanism.selectOneRowFromTable(ExpressionQueryMechanism.java:2836) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at org.eclipse.persistence.internal.queries.ExpressionQueryMechanism.selectOneRow(ExpressionQueryMechanism.java:2789) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at org.eclipse.persistence.queries.ReadObjectQuery.executeObjectLevelReadQuery(ReadObjectQuery.java:561) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at org.eclipse.persistence.queries.ObjectLevelReadQuery.executeDatabaseQuery(ObjectLevelReadQuery.java:1224) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at org.eclipse.persistence.queries.DatabaseQuery.execute(DatabaseQuery.java:914) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at org.eclipse.persistence.queries.ObjectLevelReadQuery.execute(ObjectLevelReadQuery.java:1183) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at org.eclipse.persistence.queries.ReadObjectQuery.execute(ReadObjectQuery.java:447) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at org.eclipse.persistence.queries.ObjectLevelReadQuery.executeInUnitOfWork(ObjectLevelReadQuery.java:1271) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at org.eclipse.persistence.internal.sessions.UnitOfWorkImpl.internalExecuteQuery(UnitOfWorkImpl.java:2981) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at org.eclipse.persistence.internal.sessions.AbstractSession.executeQuery(AbstractSession.java:1895) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at org.eclipse.persistence.internal.sessions.AbstractSession.executeQuery(AbstractSession.java:1877) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at org.eclipse.persistence.internal.sessions.AbstractSession.executeQuery(AbstractSession.java:1827) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at org.eclipse.persistence.internal.jpa.EntityManagerImpl.executeQuery(EntityManagerImpl.java:1007) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at org.eclipse.persistence.internal.jpa.EntityManagerImpl.findInternal(EntityManagerImpl.java:949) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at org.eclipse.persistence.internal.jpa.EntityManagerImpl.find(EntityManagerImpl.java:825) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at org.eclipse.persistence.internal.jpa.EntityManagerImpl.find(EntityManagerImpl.java:691) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at lesson_jpa.OrderDaoImpl.deleteOrder(OrderDaoImpl.java:77) [classes/:?]
+	at lesson_jpa.OrderDaoImplTest.test3DeleteOrder(OrderDaoImplTest.java:35) [test-classes/:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:566) ~[?:?]
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50) [junit-4.12.jar:4.12]
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12) [junit-4.12.jar:4.12]
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47) [junit-4.12.jar:4.12]
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325) [junit-4.12.jar:4.12]
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78) [junit-4.12.jar:4.12]
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363) [junit-4.12.jar:4.12]
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:89) [.cp/:?]
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:41) [.cp/:?]
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:541) [.cp/:?]
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:763) [.cp/:?]
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:463) [.cp/:?]
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:209) [.cp/:?]
+Caused by: java.sql.SQLSyntaxErrorException: ORA-00904: "PRODUCTS": invalid identifier
+
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:450) ~[ojdbc7.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:399) ~[ojdbc7.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1017) ~[ojdbc7.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:655) ~[ojdbc7.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:249) ~[ojdbc7.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:566) ~[ojdbc7.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:215) ~[ojdbc7.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:58) ~[ojdbc7.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.T4CPreparedStatement.executeForDescribe(T4CPreparedStatement.java:776) ~[ojdbc7.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.OracleStatement.executeMaybeDescribe(OracleStatement.java:897) ~[ojdbc7.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1034) ~[ojdbc7.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.OraclePreparedStatement.executeInternal(OraclePreparedStatement.java:3820) ~[ojdbc7.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.OraclePreparedStatement.executeQuery(OraclePreparedStatement.java:3867) ~[ojdbc7.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.OraclePreparedStatementWrapper.executeQuery(OraclePreparedStatementWrapper.java:1502) ~[ojdbc7.jar:12.1.0.1.0]
+	at org.eclipse.persistence.internal.databaseaccess.DatabaseAccessor.executeSelect(DatabaseAccessor.java:1015) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at org.eclipse.persistence.internal.databaseaccess.DatabaseAccessor.basicExecuteCall(DatabaseAccessor.java:651) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	... 47 more
+| 2019-02-26 20:39:36 | DEBUG | at logging.LoggerProviders(LoggerProviders.java:158) | Logging Provider: org.jboss.logging.Log4j2LoggerProvider | 
+| 2019-02-26 20:39:37 | DEBUG | at lesson_jpa.OrderDaoImpl(OrderDaoImpl.java:36) | persisting Order instance | 
+| 2019-02-26 20:39:37 | DEBUG | at lesson_jpa.OrderDaoImpl(OrderDaoImpl.java:41) | persist successful | 
+| 2019-02-26 20:39:37 | DEBUG | at lesson_jpa.OrderDaoImpl(OrderDaoImpl.java:112) | finding Order by id: 111112 | 
+| 2019-02-26 20:39:37 | DEBUG | at lesson_jpa.OrderDaoImpl(OrderDaoImpl.java:115) | find successful | 
+| 2019-02-26 20:39:37 | DEBUG | at lesson_jpa.OrderDaoImpl(OrderDaoImpl.java:55) | merging Orders instance | 
+| 2019-02-26 20:39:37 | DEBUG | at lesson_jpa.OrderDaoImpl(OrderDaoImpl.java:60) | merge successful | 
+| 2019-02-26 20:39:37 | DEBUG | at lesson_jpa.OrderDaoImpl(OrderDaoImpl.java:74) | removing Order instance | 
+| 2019-02-26 20:39:37 | DEBUG | at lesson_jpa.OrderDaoImpl(OrderDaoImpl.java:79) | remove successful | 
+| 2019-02-26 20:44:12 | DEBUG | at logging.LoggerProviders(LoggerProviders.java:158) | Logging Provider: org.jboss.logging.Log4j2LoggerProvider | 
+| 2019-02-26 20:44:12 | DEBUG | at lesson_jpa.OrderDaoImpl(OrderDaoImpl.java:36) | persisting Order instance | 
+| 2019-02-26 20:44:12 | DEBUG | at lesson_jpa.OrderDaoImpl(OrderDaoImpl.java:112) | finding Order by id: 111112 | 
+| 2019-02-26 20:44:12 | ERROR | at lesson_jpa.OrderDaoImpl(OrderDaoImpl.java:118) | find failed | 
+org.eclipse.persistence.exceptions.DatabaseException: 
+Internal Exception: java.sql.SQLSyntaxErrorException: ORA-00904: "PRODUCT_ID": invalid identifier
+
+Error Code: 904
+Call: SELECT ORDER_NUM, AMOUNT, MFR, ORDER_DATE, QTY, PRODUCT_ID FROM MA_STUDENT.ORDERS WHERE (ORDER_NUM = ?)
+	bind => [1 parameter bound]
+Query: ReadObjectQuery(name="readOrder" referenceClass=Order sql="SELECT ORDER_NUM, AMOUNT, MFR, ORDER_DATE, QTY, PRODUCT_ID FROM MA_STUDENT.ORDERS WHERE (ORDER_NUM = ?)")
+	at org.eclipse.persistence.exceptions.DatabaseException.sqlException(DatabaseException.java:342) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at org.eclipse.persistence.internal.databaseaccess.DatabaseAccessor.basicExecuteCall(DatabaseAccessor.java:691) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at org.eclipse.persistence.internal.databaseaccess.DatabaseAccessor.executeCall(DatabaseAccessor.java:567) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at org.eclipse.persistence.internal.sessions.AbstractSession.basicExecuteCall(AbstractSession.java:2096) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at org.eclipse.persistence.sessions.server.ServerSession.executeCall(ServerSession.java:603) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at org.eclipse.persistence.internal.queries.DatasourceCallQueryMechanism.executeCall(DatasourceCallQueryMechanism.java:275) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at org.eclipse.persistence.internal.queries.DatasourceCallQueryMechanism.executeCall(DatasourceCallQueryMechanism.java:261) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at org.eclipse.persistence.internal.queries.DatasourceCallQueryMechanism.selectOneRow(DatasourceCallQueryMechanism.java:748) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at org.eclipse.persistence.internal.queries.ExpressionQueryMechanism.selectOneRowFromTable(ExpressionQueryMechanism.java:2836) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at org.eclipse.persistence.internal.queries.ExpressionQueryMechanism.selectOneRow(ExpressionQueryMechanism.java:2789) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at org.eclipse.persistence.queries.ReadObjectQuery.executeObjectLevelReadQuery(ReadObjectQuery.java:561) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at org.eclipse.persistence.queries.ObjectLevelReadQuery.executeDatabaseQuery(ObjectLevelReadQuery.java:1224) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at org.eclipse.persistence.queries.DatabaseQuery.execute(DatabaseQuery.java:914) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at org.eclipse.persistence.queries.ObjectLevelReadQuery.execute(ObjectLevelReadQuery.java:1183) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at org.eclipse.persistence.queries.ReadObjectQuery.execute(ReadObjectQuery.java:447) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at org.eclipse.persistence.queries.ObjectLevelReadQuery.executeInUnitOfWork(ObjectLevelReadQuery.java:1271) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at org.eclipse.persistence.internal.sessions.UnitOfWorkImpl.internalExecuteQuery(UnitOfWorkImpl.java:2981) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at org.eclipse.persistence.internal.sessions.AbstractSession.executeQuery(AbstractSession.java:1895) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at org.eclipse.persistence.internal.sessions.AbstractSession.executeQuery(AbstractSession.java:1877) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at org.eclipse.persistence.internal.sessions.AbstractSession.executeQuery(AbstractSession.java:1827) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at org.eclipse.persistence.internal.jpa.EntityManagerImpl.executeQuery(EntityManagerImpl.java:1007) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at org.eclipse.persistence.internal.jpa.EntityManagerImpl.findInternal(EntityManagerImpl.java:949) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at org.eclipse.persistence.internal.jpa.EntityManagerImpl.find(EntityManagerImpl.java:825) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at org.eclipse.persistence.internal.jpa.EntityManagerImpl.find(EntityManagerImpl.java:691) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at lesson_jpa.OrderDaoImpl.findOrderById(OrderDaoImpl.java:114) [classes/:?]
+	at lesson_jpa.OrderDaoImplTest.test21FindOrderById(OrderDaoImplTest.java:40) [test-classes/:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:566) ~[?:?]
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50) [junit-4.12.jar:4.12]
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12) [junit-4.12.jar:4.12]
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47) [junit-4.12.jar:4.12]
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325) [junit-4.12.jar:4.12]
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78) [junit-4.12.jar:4.12]
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363) [junit-4.12.jar:4.12]
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:89) [.cp/:?]
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:41) [.cp/:?]
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:541) [.cp/:?]
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:763) [.cp/:?]
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:463) [.cp/:?]
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:209) [.cp/:?]
+Caused by: java.sql.SQLSyntaxErrorException: ORA-00904: "PRODUCT_ID": invalid identifier
+
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:450) ~[ojdbc7.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:399) ~[ojdbc7.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1017) ~[ojdbc7.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:655) ~[ojdbc7.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:249) ~[ojdbc7.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:566) ~[ojdbc7.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:215) ~[ojdbc7.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:58) ~[ojdbc7.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.T4CPreparedStatement.executeForDescribe(T4CPreparedStatement.java:776) ~[ojdbc7.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.OracleStatement.executeMaybeDescribe(OracleStatement.java:897) ~[ojdbc7.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1034) ~[ojdbc7.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.OraclePreparedStatement.executeInternal(OraclePreparedStatement.java:3820) ~[ojdbc7.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.OraclePreparedStatement.executeQuery(OraclePreparedStatement.java:3867) ~[ojdbc7.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.OraclePreparedStatementWrapper.executeQuery(OraclePreparedStatementWrapper.java:1502) ~[ojdbc7.jar:12.1.0.1.0]
+	at org.eclipse.persistence.internal.databaseaccess.DatabaseAccessor.executeSelect(DatabaseAccessor.java:1015) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at org.eclipse.persistence.internal.databaseaccess.DatabaseAccessor.basicExecuteCall(DatabaseAccessor.java:651) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	... 47 more
+| 2019-02-26 20:44:13 | DEBUG | at lesson_jpa.OrderDaoImpl(OrderDaoImpl.java:55) | merging Orders instance | 
+| 2019-02-26 20:44:13 | ERROR | at lesson_jpa.OrderDaoImpl(OrderDaoImpl.java:67) | merge failed | 
+org.eclipse.persistence.exceptions.DatabaseException: 
+Internal Exception: java.sql.SQLSyntaxErrorException: ORA-00904: "PRODUCT_ID": invalid identifier
+
+Error Code: 904
+Call: SELECT ORDER_NUM, AMOUNT, MFR, ORDER_DATE, QTY, PRODUCT_ID FROM MA_STUDENT.ORDERS WHERE (ORDER_NUM = ?)
+	bind => [1 parameter bound]
+Query: ReadObjectQuery(referenceClass=Order )
+	at org.eclipse.persistence.exceptions.DatabaseException.sqlException(DatabaseException.java:342) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at org.eclipse.persistence.internal.databaseaccess.DatabaseAccessor.basicExecuteCall(DatabaseAccessor.java:691) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at org.eclipse.persistence.internal.databaseaccess.DatabaseAccessor.executeCall(DatabaseAccessor.java:567) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at org.eclipse.persistence.internal.sessions.AbstractSession.basicExecuteCall(AbstractSession.java:2096) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at org.eclipse.persistence.sessions.server.ServerSession.executeCall(ServerSession.java:603) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at org.eclipse.persistence.internal.queries.DatasourceCallQueryMechanism.executeCall(DatasourceCallQueryMechanism.java:275) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at org.eclipse.persistence.internal.queries.DatasourceCallQueryMechanism.executeCall(DatasourceCallQueryMechanism.java:261) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at org.eclipse.persistence.internal.queries.DatasourceCallQueryMechanism.selectOneRow(DatasourceCallQueryMechanism.java:748) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at org.eclipse.persistence.internal.queries.ExpressionQueryMechanism.selectOneRowFromTable(ExpressionQueryMechanism.java:2836) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at org.eclipse.persistence.internal.queries.ExpressionQueryMechanism.selectOneRow(ExpressionQueryMechanism.java:2789) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at org.eclipse.persistence.queries.ReadObjectQuery.executeObjectLevelReadQuery(ReadObjectQuery.java:561) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at org.eclipse.persistence.queries.ObjectLevelReadQuery.executeDatabaseQuery(ObjectLevelReadQuery.java:1224) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at org.eclipse.persistence.queries.DatabaseQuery.execute(DatabaseQuery.java:914) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at org.eclipse.persistence.queries.ObjectLevelReadQuery.execute(ObjectLevelReadQuery.java:1183) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at org.eclipse.persistence.queries.ReadObjectQuery.execute(ReadObjectQuery.java:447) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at org.eclipse.persistence.queries.ObjectLevelReadQuery.executeInUnitOfWork(ObjectLevelReadQuery.java:1271) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at org.eclipse.persistence.internal.sessions.UnitOfWorkImpl.internalExecuteQuery(UnitOfWorkImpl.java:2981) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at org.eclipse.persistence.internal.sessions.AbstractSession.executeQuery(AbstractSession.java:1895) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at org.eclipse.persistence.internal.sessions.AbstractSession.executeQuery(AbstractSession.java:1877) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at org.eclipse.persistence.internal.sessions.AbstractSession.executeQuery(AbstractSession.java:1827) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at org.eclipse.persistence.internal.sessions.AbstractSession.readObject(AbstractSession.java:3821) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at org.eclipse.persistence.internal.sessions.MergeManager.registerObjectForMergeCloneIntoWorkingCopy(MergeManager.java:1108) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at org.eclipse.persistence.internal.sessions.MergeManager.mergeChangesOfCloneIntoWorkingCopy(MergeManager.java:575) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at org.eclipse.persistence.internal.sessions.MergeManager.mergeChanges(MergeManager.java:324) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at org.eclipse.persistence.internal.sessions.UnitOfWorkImpl.mergeCloneWithReferences(UnitOfWorkImpl.java:3614) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at org.eclipse.persistence.internal.sessions.RepeatableWriteUnitOfWork.mergeCloneWithReferences(RepeatableWriteUnitOfWork.java:389) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at org.eclipse.persistence.internal.sessions.UnitOfWorkImpl.mergeCloneWithReferences(UnitOfWorkImpl.java:3574) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at org.eclipse.persistence.internal.jpa.EntityManagerImpl.mergeInternal(EntityManagerImpl.java:643) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at org.eclipse.persistence.internal.jpa.EntityManagerImpl.merge(EntityManagerImpl.java:620) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at lesson_jpa.OrderDaoImpl.updateOrder(OrderDaoImpl.java:58) [classes/:?]
+	at lesson_jpa.OrderDaoImplTest.test2UpdateOrder(OrderDaoImplTest.java:30) [test-classes/:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:566) ~[?:?]
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50) [junit-4.12.jar:4.12]
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12) [junit-4.12.jar:4.12]
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47) [junit-4.12.jar:4.12]
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325) [junit-4.12.jar:4.12]
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78) [junit-4.12.jar:4.12]
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363) [junit-4.12.jar:4.12]
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:89) [.cp/:?]
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:41) [.cp/:?]
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:541) [.cp/:?]
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:763) [.cp/:?]
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:463) [.cp/:?]
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:209) [.cp/:?]
+Caused by: java.sql.SQLSyntaxErrorException: ORA-00904: "PRODUCT_ID": invalid identifier
+
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:450) ~[ojdbc7.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:399) ~[ojdbc7.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1017) ~[ojdbc7.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:655) ~[ojdbc7.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:249) ~[ojdbc7.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:566) ~[ojdbc7.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:215) ~[ojdbc7.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:58) ~[ojdbc7.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.T4CPreparedStatement.executeForDescribe(T4CPreparedStatement.java:776) ~[ojdbc7.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.OracleStatement.executeMaybeDescribe(OracleStatement.java:897) ~[ojdbc7.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1034) ~[ojdbc7.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.OraclePreparedStatement.executeInternal(OraclePreparedStatement.java:3820) ~[ojdbc7.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.OraclePreparedStatement.executeQuery(OraclePreparedStatement.java:3867) ~[ojdbc7.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.OraclePreparedStatementWrapper.executeQuery(OraclePreparedStatementWrapper.java:1502) ~[ojdbc7.jar:12.1.0.1.0]
+	at org.eclipse.persistence.internal.databaseaccess.DatabaseAccessor.executeSelect(DatabaseAccessor.java:1015) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at org.eclipse.persistence.internal.databaseaccess.DatabaseAccessor.basicExecuteCall(DatabaseAccessor.java:651) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	... 52 more
+| 2019-02-26 20:44:13 | DEBUG | at lesson_jpa.OrderDaoImpl(OrderDaoImpl.java:74) | removing Order instance | 
+| 2019-02-26 20:44:13 | ERROR | at lesson_jpa.OrderDaoImpl(OrderDaoImpl.java:86) | remove failed | 
+org.eclipse.persistence.exceptions.DatabaseException: 
+Internal Exception: java.sql.SQLSyntaxErrorException: ORA-00904: "PRODUCT_ID": invalid identifier
+
+Error Code: 904
+Call: SELECT ORDER_NUM, AMOUNT, MFR, ORDER_DATE, QTY, PRODUCT_ID FROM MA_STUDENT.ORDERS WHERE (ORDER_NUM = ?)
+	bind => [1 parameter bound]
+Query: ReadObjectQuery(name="readOrder" referenceClass=Order sql="SELECT ORDER_NUM, AMOUNT, MFR, ORDER_DATE, QTY, PRODUCT_ID FROM MA_STUDENT.ORDERS WHERE (ORDER_NUM = ?)")
+	at org.eclipse.persistence.exceptions.DatabaseException.sqlException(DatabaseException.java:342) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at org.eclipse.persistence.internal.databaseaccess.DatabaseAccessor.basicExecuteCall(DatabaseAccessor.java:691) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at org.eclipse.persistence.internal.databaseaccess.DatabaseAccessor.executeCall(DatabaseAccessor.java:567) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at org.eclipse.persistence.internal.sessions.AbstractSession.basicExecuteCall(AbstractSession.java:2096) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at org.eclipse.persistence.sessions.server.ServerSession.executeCall(ServerSession.java:603) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at org.eclipse.persistence.internal.queries.DatasourceCallQueryMechanism.executeCall(DatasourceCallQueryMechanism.java:275) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at org.eclipse.persistence.internal.queries.DatasourceCallQueryMechanism.executeCall(DatasourceCallQueryMechanism.java:261) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at org.eclipse.persistence.internal.queries.DatasourceCallQueryMechanism.selectOneRow(DatasourceCallQueryMechanism.java:748) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at org.eclipse.persistence.internal.queries.ExpressionQueryMechanism.selectOneRowFromTable(ExpressionQueryMechanism.java:2836) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at org.eclipse.persistence.internal.queries.ExpressionQueryMechanism.selectOneRow(ExpressionQueryMechanism.java:2789) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at org.eclipse.persistence.queries.ReadObjectQuery.executeObjectLevelReadQuery(ReadObjectQuery.java:561) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at org.eclipse.persistence.queries.ObjectLevelReadQuery.executeDatabaseQuery(ObjectLevelReadQuery.java:1224) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at org.eclipse.persistence.queries.DatabaseQuery.execute(DatabaseQuery.java:914) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at org.eclipse.persistence.queries.ObjectLevelReadQuery.execute(ObjectLevelReadQuery.java:1183) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at org.eclipse.persistence.queries.ReadObjectQuery.execute(ReadObjectQuery.java:447) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at org.eclipse.persistence.queries.ObjectLevelReadQuery.executeInUnitOfWork(ObjectLevelReadQuery.java:1271) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at org.eclipse.persistence.internal.sessions.UnitOfWorkImpl.internalExecuteQuery(UnitOfWorkImpl.java:2981) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at org.eclipse.persistence.internal.sessions.AbstractSession.executeQuery(AbstractSession.java:1895) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at org.eclipse.persistence.internal.sessions.AbstractSession.executeQuery(AbstractSession.java:1877) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at org.eclipse.persistence.internal.sessions.AbstractSession.executeQuery(AbstractSession.java:1827) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at org.eclipse.persistence.internal.jpa.EntityManagerImpl.executeQuery(EntityManagerImpl.java:1007) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at org.eclipse.persistence.internal.jpa.EntityManagerImpl.findInternal(EntityManagerImpl.java:949) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at org.eclipse.persistence.internal.jpa.EntityManagerImpl.find(EntityManagerImpl.java:825) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at org.eclipse.persistence.internal.jpa.EntityManagerImpl.find(EntityManagerImpl.java:691) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at lesson_jpa.OrderDaoImpl.deleteOrder(OrderDaoImpl.java:77) [classes/:?]
+	at lesson_jpa.OrderDaoImplTest.test3DeleteOrder(OrderDaoImplTest.java:35) [test-classes/:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:566) ~[?:?]
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50) [junit-4.12.jar:4.12]
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12) [junit-4.12.jar:4.12]
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47) [junit-4.12.jar:4.12]
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325) [junit-4.12.jar:4.12]
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78) [junit-4.12.jar:4.12]
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363) [junit-4.12.jar:4.12]
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:89) [.cp/:?]
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:41) [.cp/:?]
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:541) [.cp/:?]
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:763) [.cp/:?]
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:463) [.cp/:?]
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:209) [.cp/:?]
+Caused by: java.sql.SQLSyntaxErrorException: ORA-00904: "PRODUCT_ID": invalid identifier
+
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:450) ~[ojdbc7.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:399) ~[ojdbc7.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1017) ~[ojdbc7.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:655) ~[ojdbc7.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:249) ~[ojdbc7.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:566) ~[ojdbc7.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:215) ~[ojdbc7.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:58) ~[ojdbc7.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.T4CPreparedStatement.executeForDescribe(T4CPreparedStatement.java:776) ~[ojdbc7.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.OracleStatement.executeMaybeDescribe(OracleStatement.java:897) ~[ojdbc7.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1034) ~[ojdbc7.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.OraclePreparedStatement.executeInternal(OraclePreparedStatement.java:3820) ~[ojdbc7.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.OraclePreparedStatement.executeQuery(OraclePreparedStatement.java:3867) ~[ojdbc7.jar:12.1.0.1.0]
+	at oracle.jdbc.driver.OraclePreparedStatementWrapper.executeQuery(OraclePreparedStatementWrapper.java:1502) ~[ojdbc7.jar:12.1.0.1.0]
+	at org.eclipse.persistence.internal.databaseaccess.DatabaseAccessor.executeSelect(DatabaseAccessor.java:1015) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at org.eclipse.persistence.internal.databaseaccess.DatabaseAccessor.basicExecuteCall(DatabaseAccessor.java:651) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	... 47 more
+| 2019-02-26 20:44:20 | DEBUG | at logging.LoggerProviders(LoggerProviders.java:158) | Logging Provider: org.jboss.logging.Log4j2LoggerProvider | 
+| 2019-02-26 20:44:21 | DEBUG | at lesson_jpa.OrderDaoImpl(OrderDaoImpl.java:36) | persisting Order instance | 
+| 2019-02-26 20:44:21 | DEBUG | at lesson_jpa.OrderDaoImpl(OrderDaoImpl.java:41) | persist successful | 
+| 2019-02-26 20:44:21 | DEBUG | at lesson_jpa.OrderDaoImpl(OrderDaoImpl.java:112) | finding Order by id: 111112 | 
+| 2019-02-26 20:44:21 | DEBUG | at lesson_jpa.OrderDaoImpl(OrderDaoImpl.java:115) | find successful | 
+| 2019-02-26 20:44:21 | DEBUG | at lesson_jpa.OrderDaoImpl(OrderDaoImpl.java:55) | merging Orders instance | 
+| 2019-02-26 20:44:21 | DEBUG | at lesson_jpa.OrderDaoImpl(OrderDaoImpl.java:60) | merge successful | 
+| 2019-02-26 20:44:21 | DEBUG | at lesson_jpa.OrderDaoImpl(OrderDaoImpl.java:74) | removing Order instance | 
+| 2019-02-26 20:44:21 | DEBUG | at lesson_jpa.OrderDaoImpl(OrderDaoImpl.java:79) | remove successful | 
+| 2019-02-26 20:47:28 | DEBUG | at logging.LoggerProviders(LoggerProviders.java:158) | Logging Provider: org.jboss.logging.Log4j2LoggerProvider | 
+| 2019-02-26 20:47:29 | DEBUG | at lesson_jpa.OrderDaoImpl(OrderDaoImpl.java:36) | persisting Order instance | 
+| 2019-02-26 20:47:29 | DEBUG | at lesson_jpa.OrderDaoImpl(OrderDaoImpl.java:41) | persist successful | 
+| 2019-02-26 20:47:29 | DEBUG | at lesson_jpa.OrderDaoImpl(OrderDaoImpl.java:112) | finding Order by id: 111112 | 
+| 2019-02-26 20:47:29 | DEBUG | at lesson_jpa.OrderDaoImpl(OrderDaoImpl.java:115) | find successful | 
+| 2019-02-26 20:47:29 | DEBUG | at lesson_jpa.OrderDaoImpl(OrderDaoImpl.java:55) | merging Orders instance | 
+| 2019-02-26 20:47:29 | DEBUG | at lesson_jpa.OrderDaoImpl(OrderDaoImpl.java:60) | merge successful | 
+| 2019-02-26 20:47:29 | DEBUG | at lesson_jpa.OrderDaoImpl(OrderDaoImpl.java:74) | removing Order instance | 
+| 2019-02-26 20:47:29 | DEBUG | at lesson_jpa.OrderDaoImpl(OrderDaoImpl.java:79) | remove successful | 
+| 2019-02-26 20:49:27 | DEBUG | at logging.LoggerProviders(LoggerProviders.java:158) | Logging Provider: org.jboss.logging.Log4j2LoggerProvider | 
+| 2019-02-26 20:49:28 | DEBUG | at lesson_jpa.OrderDaoImpl(OrderDaoImpl.java:36) | persisting Order instance | 
+| 2019-02-26 20:49:28 | DEBUG | at lesson_jpa.OrderDaoImpl(OrderDaoImpl.java:41) | persist successful | 
+| 2019-02-26 20:49:28 | DEBUG | at lesson_jpa.OrderDaoImpl(OrderDaoImpl.java:55) | merging Orders instance | 
+| 2019-02-26 20:49:28 | DEBUG | at lesson_jpa.OrderDaoImpl(OrderDaoImpl.java:60) | merge successful | 
+| 2019-02-26 20:49:28 | DEBUG | at lesson_jpa.OrderDaoImpl(OrderDaoImpl.java:74) | removing Order instance | 
+| 2019-02-26 20:49:28 | DEBUG | at lesson_jpa.OrderDaoImpl(OrderDaoImpl.java:79) | remove successful | 
+| 2019-02-26 20:49:31 | DEBUG | at logging.LoggerProviders(LoggerProviders.java:158) | Logging Provider: org.jboss.logging.Log4j2LoggerProvider | 
+| 2019-02-26 20:49:31 | DEBUG | at lesson_jpa.OrderDaoImpl(OrderDaoImpl.java:36) | persisting Order instance | 
+| 2019-02-26 20:49:32 | DEBUG | at lesson_jpa.OrderDaoImpl(OrderDaoImpl.java:41) | persist successful | 
+| 2019-02-26 20:49:32 | DEBUG | at lesson_jpa.OrderDaoImpl(OrderDaoImpl.java:112) | finding Order by id: 111112 | 
+| 2019-02-26 20:49:32 | DEBUG | at lesson_jpa.OrderDaoImpl(OrderDaoImpl.java:115) | find successful | 
+| 2019-02-26 20:49:32 | DEBUG | at lesson_jpa.OrderDaoImpl(OrderDaoImpl.java:112) | finding Order by id: 111112 | 
+| 2019-02-26 20:49:32 | DEBUG | at lesson_jpa.OrderDaoImpl(OrderDaoImpl.java:115) | find successful | 
+| 2019-02-26 20:49:32 | DEBUG | at lesson_jpa.OrderDaoImpl(OrderDaoImpl.java:55) | merging Orders instance | 
+| 2019-02-26 20:49:32 | DEBUG | at lesson_jpa.OrderDaoImpl(OrderDaoImpl.java:60) | merge successful | 
+| 2019-02-26 20:49:32 | DEBUG | at lesson_jpa.OrderDaoImpl(OrderDaoImpl.java:74) | removing Order instance | 
+| 2019-02-26 20:49:32 | DEBUG | at lesson_jpa.OrderDaoImpl(OrderDaoImpl.java:79) | remove successful | 
+| 2019-02-26 20:49:43 | DEBUG | at logging.LoggerProviders(LoggerProviders.java:158) | Logging Provider: org.jboss.logging.Log4j2LoggerProvider | 
+| 2019-02-26 20:49:43 | DEBUG | at lesson_jpa.OrderDaoImpl(OrderDaoImpl.java:36) | persisting Order instance | 
+| 2019-02-26 20:49:44 | DEBUG | at lesson_jpa.OrderDaoImpl(OrderDaoImpl.java:41) | persist successful | 
+| 2019-02-26 20:49:44 | DEBUG | at lesson_jpa.OrderDaoImpl(OrderDaoImpl.java:112) | finding Order by id: 111112 | 
+| 2019-02-26 20:49:44 | DEBUG | at lesson_jpa.OrderDaoImpl(OrderDaoImpl.java:115) | find successful | 
+| 2019-02-26 20:49:44 | DEBUG | at lesson_jpa.OrderDaoImpl(OrderDaoImpl.java:112) | finding Order by id: 111112 | 
+| 2019-02-26 20:49:44 | DEBUG | at lesson_jpa.OrderDaoImpl(OrderDaoImpl.java:115) | find successful | 
+| 2019-02-26 20:49:44 | DEBUG | at lesson_jpa.OrderDaoImpl(OrderDaoImpl.java:55) | merging Orders instance | 
+| 2019-02-26 20:49:44 | DEBUG | at lesson_jpa.OrderDaoImpl(OrderDaoImpl.java:60) | merge successful | 
+| 2019-02-26 20:49:44 | DEBUG | at lesson_jpa.OrderDaoImpl(OrderDaoImpl.java:74) | removing Order instance | 
+| 2019-02-26 20:49:44 | DEBUG | at lesson_jpa.OrderDaoImpl(OrderDaoImpl.java:79) | remove successful | 
+| 2019-02-26 20:50:35 | DEBUG | at logging.LoggerProviders(LoggerProviders.java:158) | Logging Provider: org.jboss.logging.Log4j2LoggerProvider | 
+| 2019-02-26 20:50:35 | DEBUG | at lesson_jpa.OrderDaoImpl(OrderDaoImpl.java:36) | persisting Order instance | 
+| 2019-02-26 20:50:35 | DEBUG | at lesson_jpa.OrderDaoImpl(OrderDaoImpl.java:41) | persist successful | 
+| 2019-02-26 20:50:35 | DEBUG | at lesson_jpa.OrderDaoImpl(OrderDaoImpl.java:112) | finding Order by id: 112961 | 
+| 2019-02-26 20:50:36 | DEBUG | at lesson_jpa.OrderDaoImpl(OrderDaoImpl.java:115) | find successful | 
+| 2019-02-26 20:50:36 | DEBUG | at lesson_jpa.OrderDaoImpl(OrderDaoImpl.java:112) | finding Order by id: 111112 | 
+| 2019-02-26 20:50:36 | DEBUG | at lesson_jpa.OrderDaoImpl(OrderDaoImpl.java:115) | find successful | 
+| 2019-02-26 20:50:36 | DEBUG | at lesson_jpa.OrderDaoImpl(OrderDaoImpl.java:55) | merging Orders instance | 
+| 2019-02-26 20:50:36 | DEBUG | at lesson_jpa.OrderDaoImpl(OrderDaoImpl.java:60) | merge successful | 
+| 2019-02-26 20:50:36 | DEBUG | at lesson_jpa.OrderDaoImpl(OrderDaoImpl.java:74) | removing Order instance | 
+| 2019-02-26 20:50:36 | DEBUG | at lesson_jpa.OrderDaoImpl(OrderDaoImpl.java:79) | remove successful | 
+| 2019-02-26 20:50:51 | DEBUG | at logging.LoggerProviders(LoggerProviders.java:158) | Logging Provider: org.jboss.logging.Log4j2LoggerProvider | 
+| 2019-02-26 20:50:52 | DEBUG | at lesson_jpa.OrderDaoImpl(OrderDaoImpl.java:36) | persisting Order instance | 
+| 2019-02-26 20:50:52 | DEBUG | at lesson_jpa.OrderDaoImpl(OrderDaoImpl.java:41) | persist successful | 
+| 2019-02-26 20:50:52 | DEBUG | at lesson_jpa.OrderDaoImpl(OrderDaoImpl.java:112) | finding Order by id: 112961 | 
+| 2019-02-26 20:50:52 | DEBUG | at lesson_jpa.OrderDaoImpl(OrderDaoImpl.java:115) | find successful | 
+| 2019-02-26 20:50:52 | DEBUG | at lesson_jpa.OrderDaoImpl(OrderDaoImpl.java:112) | finding Order by id: 111112 | 
+| 2019-02-26 20:50:52 | DEBUG | at lesson_jpa.OrderDaoImpl(OrderDaoImpl.java:115) | find successful | 
+| 2019-02-26 20:50:52 | DEBUG | at lesson_jpa.OrderDaoImpl(OrderDaoImpl.java:55) | merging Orders instance | 
+| 2019-02-26 20:50:52 | DEBUG | at lesson_jpa.OrderDaoImpl(OrderDaoImpl.java:60) | merge successful | 
+| 2019-02-26 20:50:52 | DEBUG | at lesson_jpa.OrderDaoImpl(OrderDaoImpl.java:74) | removing Order instance | 
+| 2019-02-26 20:50:52 | DEBUG | at lesson_jpa.OrderDaoImpl(OrderDaoImpl.java:79) | remove successful | 
+| 2019-02-26 20:51:47 | DEBUG | at logging.LoggerProviders(LoggerProviders.java:158) | Logging Provider: org.jboss.logging.Log4j2LoggerProvider | 
+| 2019-02-26 20:51:47 | DEBUG | at lesson_jpa.OrderDaoImpl(OrderDaoImpl.java:36) | persisting Order instance | 
+| 2019-02-26 20:51:47 | DEBUG | at lesson_jpa.OrderDaoImpl(OrderDaoImpl.java:41) | persist successful | 
+| 2019-02-26 20:51:47 | DEBUG | at lesson_jpa.OrderDaoImpl(OrderDaoImpl.java:112) | finding Order by id: 112961 | 
+| 2019-02-26 20:51:47 | DEBUG | at lesson_jpa.OrderDaoImpl(OrderDaoImpl.java:115) | find successful | 
+| 2019-02-26 20:51:47 | DEBUG | at lesson_jpa.OrderDaoImpl(OrderDaoImpl.java:112) | finding Order by id: 111112 | 
+| 2019-02-26 20:51:47 | DEBUG | at lesson_jpa.OrderDaoImpl(OrderDaoImpl.java:115) | find successful | 
+| 2019-02-26 20:51:47 | DEBUG | at lesson_jpa.OrderDaoImpl(OrderDaoImpl.java:55) | merging Orders instance | 
+| 2019-02-26 20:51:47 | DEBUG | at lesson_jpa.OrderDaoImpl(OrderDaoImpl.java:60) | merge successful | 
+| 2019-02-26 20:51:47 | DEBUG | at lesson_jpa.OrderDaoImpl(OrderDaoImpl.java:74) | removing Order instance | 
+| 2019-02-26 20:51:47 | DEBUG | at lesson_jpa.OrderDaoImpl(OrderDaoImpl.java:79) | remove successful | 
+| 2019-02-26 21:01:36 | DEBUG | at logging.LoggerProviders(LoggerProviders.java:158) | Logging Provider: org.jboss.logging.Log4j2LoggerProvider | 
+| 2019-02-26 21:02:22 | DEBUG | at logging.LoggerProviders(LoggerProviders.java:158) | Logging Provider: org.jboss.logging.Log4j2LoggerProvider | 
+| 2019-02-26 21:02:23 | DEBUG | at lesson_jpa.OrderDaoImpl(OrderDaoImpl.java:36) | persisting Order instance | 
+| 2019-02-26 21:02:23 | DEBUG | at lesson_jpa.OrderDaoImpl(OrderDaoImpl.java:41) | persist successful | 
+| 2019-02-26 21:02:23 | DEBUG | at lesson_jpa.OrderDaoImpl(OrderDaoImpl.java:112) | finding Order by id: 112961 | 
+| 2019-02-26 21:02:23 | DEBUG | at lesson_jpa.OrderDaoImpl(OrderDaoImpl.java:115) | find successful | 
+| 2019-02-26 21:02:23 | DEBUG | at lesson_jpa.OrderDaoImpl(OrderDaoImpl.java:112) | finding Order by id: 111112 | 
+| 2019-02-26 21:02:23 | DEBUG | at lesson_jpa.OrderDaoImpl(OrderDaoImpl.java:115) | find successful | 
+| 2019-02-26 21:02:23 | DEBUG | at lesson_jpa.OrderDaoImpl(OrderDaoImpl.java:55) | merging Orders instance | 
+| 2019-02-26 21:02:23 | DEBUG | at lesson_jpa.OrderDaoImpl(OrderDaoImpl.java:60) | merge successful | 
+| 2019-02-26 21:02:23 | DEBUG | at lesson_jpa.OrderDaoImpl(OrderDaoImpl.java:74) | removing Order instance | 
+| 2019-02-26 21:02:23 | DEBUG | at lesson_jpa.OrderDaoImpl(OrderDaoImpl.java:79) | remove successful | 
+| 2019-02-26 21:09:18 | DEBUG | at logging.LoggerProviders(LoggerProviders.java:158) | Logging Provider: org.jboss.logging.Log4j2LoggerProvider | 
+| 2019-02-26 21:09:26 | DEBUG | at logging.LoggerProviders(LoggerProviders.java:158) | Logging Provider: org.jboss.logging.Log4j2LoggerProvider | 
+| 2019-02-26 21:09:27 | DEBUG | at lesson_jpa.OrderDaoImpl(OrderDaoImpl.java:36) | persisting Order instance | 
+| 2019-02-26 21:09:27 | DEBUG | at lesson_jpa.OrderDaoImpl(OrderDaoImpl.java:41) | persist successful | 
+| 2019-02-26 21:09:27 | DEBUG | at lesson_jpa.OrderDaoImpl(OrderDaoImpl.java:112) | finding Order by id: 112961 | 
+| 2019-02-26 21:09:27 | DEBUG | at lesson_jpa.OrderDaoImpl(OrderDaoImpl.java:115) | find successful | 
+| 2019-02-26 21:09:27 | DEBUG | at lesson_jpa.OrderDaoImpl(OrderDaoImpl.java:112) | finding Order by id: 111112 | 
+| 2019-02-26 21:09:27 | DEBUG | at lesson_jpa.OrderDaoImpl(OrderDaoImpl.java:115) | find successful | 
+| 2019-02-26 21:09:27 | DEBUG | at lesson_jpa.OrderDaoImpl(OrderDaoImpl.java:55) | merging Orders instance | 
+| 2019-02-26 21:09:27 | DEBUG | at lesson_jpa.OrderDaoImpl(OrderDaoImpl.java:60) | merge successful | 
+| 2019-02-26 21:09:27 | DEBUG | at lesson_jpa.OrderDaoImpl(OrderDaoImpl.java:74) | removing Order instance | 
+| 2019-02-26 21:09:27 | DEBUG | at lesson_jpa.OrderDaoImpl(OrderDaoImpl.java:79) | remove successful | 
+| 2019-02-26 21:11:54 | DEBUG | at logging.LoggerProviders(LoggerProviders.java:158) | Logging Provider: org.jboss.logging.Log4j2LoggerProvider | 
+| 2019-02-26 21:14:17 | DEBUG | at logging.LoggerProviders(LoggerProviders.java:158) | Logging Provider: org.jboss.logging.Log4j2LoggerProvider | 
+| 2019-02-26 21:15:35 | DEBUG | at logging.LoggerProviders(LoggerProviders.java:158) | Logging Provider: org.jboss.logging.Log4j2LoggerProvider | 
+| 2019-02-26 21:15:35 | DEBUG | at lesson_jpa.OrderDaoImpl(OrderDaoImpl.java:36) | persisting Order instance | 
+| 2019-02-26 21:15:35 | DEBUG | at lesson_jpa.OrderDaoImpl(OrderDaoImpl.java:41) | persist successful | 
+| 2019-02-26 21:15:35 | DEBUG | at lesson_jpa.OrderDaoImpl(OrderDaoImpl.java:112) | finding Order by id: 112961 | 
+| 2019-02-26 21:15:35 | DEBUG | at lesson_jpa.OrderDaoImpl(OrderDaoImpl.java:115) | find successful | 
+| 2019-02-26 21:15:35 | DEBUG | at lesson_jpa.OrderDaoImpl(OrderDaoImpl.java:112) | finding Order by id: 111112 | 
+| 2019-02-26 21:15:35 | DEBUG | at lesson_jpa.OrderDaoImpl(OrderDaoImpl.java:115) | find successful | 
+| 2019-02-26 21:15:35 | DEBUG | at lesson_jpa.OrderDaoImpl(OrderDaoImpl.java:55) | merging Orders instance | 
+| 2019-02-26 21:15:35 | DEBUG | at lesson_jpa.OrderDaoImpl(OrderDaoImpl.java:60) | merge successful | 
+| 2019-02-26 21:15:35 | DEBUG | at lesson_jpa.OrderDaoImpl(OrderDaoImpl.java:74) | removing Order instance | 
+| 2019-02-26 21:15:35 | DEBUG | at lesson_jpa.OrderDaoImpl(OrderDaoImpl.java:79) | remove successful | 
