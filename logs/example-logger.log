@@ -1133,3 +1133,5 @@ Caused by: java.sql.SQLSyntaxErrorException: ORA-00904: "PRODUCT_ID": invalid id
 | 2019-02-26 21:15:35 | DEBUG | at lesson_jpa.OrderDaoImpl(OrderDaoImpl.java:60) | merge successful | 
 | 2019-02-26 21:15:35 | DEBUG | at lesson_jpa.OrderDaoImpl(OrderDaoImpl.java:74) | removing Order instance | 
 | 2019-02-26 21:15:35 | DEBUG | at lesson_jpa.OrderDaoImpl(OrderDaoImpl.java:79) | remove successful | 
+| 2019-02-28 11:38:42 | DEBUG | at logging.LoggerProviders(LoggerProviders.java:158) | Logging Provider: org.jboss.logging.Log4j2LoggerProvider | 
+| 2019-02-28 11:42:19 | DEBUG | at logging.LoggerProviders(LoggerProviders.java:158) | Logging Provider: org.jboss.logging.Log4j2LoggerProvider | 

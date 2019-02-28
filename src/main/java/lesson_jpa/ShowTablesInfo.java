@@ -22,15 +22,15 @@ public class ShowTablesInfo {
 	private static EntityManager entityManager = factory.createEntityManager();
 
 	public static void main(String[] args) {
-		ShowTablesInfo.showProductInfo(BigDecimal.valueOf(114));
+		ShowTablesInfo.showProductInfo("114");
 		ShowTablesInfo.showOrderInfo(BigDecimal.valueOf(113045));
 		ShowTablesInfo.showCustomerInfo(BigDecimal.valueOf(2111));
 		ShowTablesInfo.showOfficeInfo(BigDecimal.valueOf(22));
 		ShowTablesInfo.showSalesrepsInfo(BigDecimal.valueOf(109));
 	}
 
-	public static void showProductInfo(BigDecimal productId) {
-		LOG.debug("showing info for Customers");
+	public static void showProductInfo(String productId) {
+		LOG.debug("showing info for Products");
 		try {
 			System.out.println(entityManager.find(Product.class, productId));
 			LOG.debug("find succeded");
