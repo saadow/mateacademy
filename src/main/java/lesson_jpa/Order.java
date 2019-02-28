@@ -32,6 +32,12 @@ public class Order implements java.io.Serializable {
 	private BigDecimal qty;
 	@Column
 	private BigDecimal amount;
+	@ManyToOne(fetch = FetchType.EAGER)
+	@JoinColumn(name = "CUST")
+	private Customer customer;
+	@ManyToOne(fetch = FetchType.LAZY)
+	@JoinColumn(name = "REP")
+	private Salesreps salesreps;
 
 	public Order() {
 	}
@@ -68,6 +74,14 @@ public class Order implements java.io.Serializable {
 
 	public void setProduct(Product product) {
 		this.product = product;
+	}
+
+	public Customer getCustomers() {
+		return this.customer;
+	}
+
+	public Salesreps getSalesreps() {
+		return this.salesreps;
 	}
 
 	public Date getOrderDate() {

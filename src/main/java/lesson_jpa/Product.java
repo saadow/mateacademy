@@ -24,7 +24,7 @@ public class Product implements java.io.Serializable {
 	private BigDecimal price;
 	@Column(name = "QTY_ON_HAND")
 	private BigDecimal qtyOnHand;
-	@OneToMany(fetch = FetchType.LAZY, mappedBy = "product")
+	@OneToMany(fetch = FetchType.EAGER, mappedBy = "product")
 	Set<Order> orders = new HashSet<Order>(0);
 
 	public Product() {
