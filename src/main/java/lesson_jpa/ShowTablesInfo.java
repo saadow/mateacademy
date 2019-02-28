@@ -23,6 +23,8 @@ public class ShowTablesInfo {
 
 	public static void main(String[] args) {
 		ShowTablesInfo.showProductInfo(BigDecimal.valueOf(112989));
+		OrderDaoImpl odi = new OrderDaoImpl();
+		System.out.println(odi.getAllOrders());
 	}
 
 	public static Order showProductInfo(BigDecimal id) {

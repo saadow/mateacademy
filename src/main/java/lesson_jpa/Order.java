@@ -173,7 +173,7 @@ public class Order implements java.io.Serializable {
 
 	@Override
 	public String toString() {
-		return "Order [orderNum=" + orderNum + ", orderDate=" + orderDate + ", mfr=" + mfr + ", product=" + product
+		return "\nOrder [orderNum=" + orderNum + ", orderDate=" + orderDate + ", mfr=" + mfr + ", product=" + product + ", salesreps=" + salesreps + ", customers=" + customer 
 				+ ", qty=" + qty + ", amount=" + amount + "]";
 	}
 
