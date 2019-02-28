@@ -9,8 +9,7 @@ import java.math.BigDecimal;
 public class Office implements Serializable {
 
 	@Id
-	@OneToMany(fetch = FetchType.EAGER)
-	@JoinColumn(name = "REP_OFFICE")
+	@Column(name = "OFFICE")
 	private BigDecimal office;
 	private String city;
 	private String region;
