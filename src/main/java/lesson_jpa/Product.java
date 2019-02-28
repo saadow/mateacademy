@@ -34,7 +34,8 @@ public class Product implements java.io.Serializable {
 		this.productId = productId;
 	}
 
-	public Product(String productId, String mfrId, String description, BigDecimal price, BigDecimal qtyOnHand, Set<Order> orders) {
+	public Product(String productId, String mfrId, String description, BigDecimal price, BigDecimal qtyOnHand,
+			Set<Order> orders) {
 		this.productId = productId;
 		this.mfrId = mfrId;
 		this.description = description;
@@ -82,11 +83,12 @@ public class Product implements java.io.Serializable {
 	public void setQtyOnHand(BigDecimal qtyOnHand) {
 		this.qtyOnHand = qtyOnHand;
 	}
-	
+
 	public void setOrders(Set<Order> orders) {
 		this.orders = orders;
 	}
-	public Set<Order> getOrders(){
+
+	public Set<Order> getOrders() {
 		return this.orders;
 	}
 
