@@ -15,6 +15,10 @@ import java.util.Set;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
+import javax.persistence.TypedQuery;
+import javax.persistence.criteria.CriteriaBuilder;
+import javax.persistence.criteria.CriteriaQuery;
+import javax.persistence.criteria.Root;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -97,8 +101,20 @@ public class OrderDaoImpl implements OrderDao {
 
 	@Override
 	public Set<Order> getAllOrders() {
-		// TODO Auto-generated method stub
-		return null;
+		LOG.debug("getting all Order instance");
+		try {
+			CriteriaBuilder cb = entityManager.getCriteriaBuilder();
+			CriteriaQuery<Order> cq = cb.createQuery(Order.class);
+			Root<Order> rootEntry = cq.from(Order.class);
+			CriteriaQuery<Order> all = cq.select(rootEntry);
+			TypedQuery<Order> allQuery = entityManager.createQuery(all);
+			allQuery.setFirstResult(5);
+			allQuery.setMaxResults(5);
+			return new HashSet<>(allQuery.getResultList());
+		} catch (RuntimeException re) {
+			LOG.error("getting failed", re);
+			throw re;
+		}
 	}
 
 	@Override

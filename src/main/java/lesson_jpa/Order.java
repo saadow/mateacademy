@@ -32,6 +32,12 @@ public class Order implements java.io.Serializable {
 	private BigDecimal qty;
 	@Column
 	private BigDecimal amount;
+	@ManyToOne(fetch = FetchType.EAGER)
+	@JoinColumn(name = "CUST")
+	private Customer customer;
+	@ManyToOne(fetch = FetchType.LAZY)
+	@JoinColumn(name = "REP")
+	private Salesreps salesreps;
 
 	public Order() {
 	}
@@ -39,7 +45,7 @@ public class Order implements java.io.Serializable {
 	public Order(BigDecimal orderNum) {
 		this.orderNum = orderNum;
 	}
-	
+
 	public Order(BigDecimal orderNum, Product product) {
 		this.orderNum = orderNum;
 		this.product = product;
@@ -68,6 +74,14 @@ public class Order implements java.io.Serializable {
 
 	public void setProduct(Product product) {
 		this.product = product;
+	}
+
+	public Customer getCustomers() {
+		return this.customer;
+	}
+
+	public Salesreps getSalesreps() {
+		return this.salesreps;
 	}
 
 	public Date getOrderDate() {
@@ -159,7 +173,7 @@ public class Order implements java.io.Serializable {
 
 	@Override
 	public String toString() {
-		return "Order [orderNum=" + orderNum + ", orderDate=" + orderDate + ", mfr=" + mfr + ", product=" + product
+		return "\nOrder [orderNum=" + orderNum + ", orderDate=" + orderDate + ", mfr=" + mfr + ", product=" + product + ", salesreps=" + salesreps + ", customers=" + customer 
 				+ ", qty=" + qty + ", amount=" + amount + "]";
 	}
 

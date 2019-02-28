@@ -1133,3 +1133,95 @@ Caused by: java.sql.SQLSyntaxErrorException: ORA-00904: "PRODUCT_ID": invalid id
 | 2019-02-26 21:15:35 | DEBUG | at lesson_jpa.OrderDaoImpl(OrderDaoImpl.java:60) | merge successful | 
 | 2019-02-26 21:15:35 | DEBUG | at lesson_jpa.OrderDaoImpl(OrderDaoImpl.java:74) | removing Order instance | 
 | 2019-02-26 21:15:35 | DEBUG | at lesson_jpa.OrderDaoImpl(OrderDaoImpl.java:79) | remove successful | 
+| 2019-02-28 11:38:42 | DEBUG | at logging.LoggerProviders(LoggerProviders.java:158) | Logging Provider: org.jboss.logging.Log4j2LoggerProvider | 
+| 2019-02-28 11:42:19 | DEBUG | at logging.LoggerProviders(LoggerProviders.java:158) | Logging Provider: org.jboss.logging.Log4j2LoggerProvider | 
+| 2019-02-28 12:46:29 | DEBUG | at logging.LoggerProviders(LoggerProviders.java:158) | Logging Provider: org.jboss.logging.Log4j2LoggerProvider | 
+| 2019-02-28 12:46:45 | DEBUG | at logging.LoggerProviders(LoggerProviders.java:158) | Logging Provider: org.jboss.logging.Log4j2LoggerProvider | 
+| 2019-02-28 12:46:45 | DEBUG | at lesson_jpa.ShowTablesInfo(ShowTablesInfo.java:32) | gettin info for Products | 
+| 2019-02-28 12:46:46 | DEBUG | at lesson_jpa.ShowTablesInfo(ShowTablesInfo.java:36) | find succeded | 
+| 2019-02-28 12:49:18 | DEBUG | at logging.LoggerProviders(LoggerProviders.java:158) | Logging Provider: org.jboss.logging.Log4j2LoggerProvider | 
+| 2019-02-28 12:49:19 | DEBUG | at lesson_jpa.ShowTablesInfo(ShowTablesInfo.java:31) | gettin info for Products | 
+| 2019-02-28 12:49:19 | DEBUG | at lesson_jpa.ShowTablesInfo(ShowTablesInfo.java:36) | find succeded | 
+| 2019-02-28 12:50:14 | DEBUG | at logging.LoggerProviders(LoggerProviders.java:158) | Logging Provider: org.jboss.logging.Log4j2LoggerProvider | 
+| 2019-02-28 12:50:15 | DEBUG | at lesson_jpa.ShowTablesInfo(ShowTablesInfo.java:31) | gettin info for Products | 
+| 2019-02-28 12:50:15 | DEBUG | at lesson_jpa.ShowTablesInfo(ShowTablesInfo.java:36) | find succeded | 
+| 2019-02-28 12:59:37 | DEBUG | at logging.LoggerProviders(LoggerProviders.java:158) | Logging Provider: org.jboss.logging.Log4j2LoggerProvider | 
+| 2019-02-28 12:59:37 | DEBUG | at lesson_jpa.ShowTablesInfo(ShowTablesInfo.java:30) | gettin info for Products | 
+| 2019-02-28 12:59:37 | DEBUG | at lesson_jpa.ShowTablesInfo(ShowTablesInfo.java:38) | find succeded | 
+| 2019-02-28 13:02:33 | DEBUG | at logging.LoggerProviders(LoggerProviders.java:158) | Logging Provider: org.jboss.logging.Log4j2LoggerProvider | 
+| 2019-02-28 13:02:33 | DEBUG | at lesson_jpa.ShowTablesInfo(ShowTablesInfo.java:29) | gettin info for Products | 
+| 2019-02-28 13:02:34 | DEBUG | at lesson_jpa.ShowTablesInfo(ShowTablesInfo.java:38) | find succeded | 
+| 2019-02-28 13:02:52 | DEBUG | at logging.LoggerProviders(LoggerProviders.java:158) | Logging Provider: org.jboss.logging.Log4j2LoggerProvider | 
+| 2019-02-28 13:02:53 | DEBUG | at lesson_jpa.ShowTablesInfo(ShowTablesInfo.java:29) | gettin info for Products | 
+| 2019-02-28 13:02:53 | DEBUG | at lesson_jpa.ShowTablesInfo(ShowTablesInfo.java:39) | find succeded | 
+| 2019-02-28 17:55:04 | DEBUG | at logging.LoggerProviders(LoggerProviders.java:158) | Logging Provider: org.jboss.logging.Log4j2LoggerProvider | 
+| 2019-02-28 17:55:04 | DEBUG | at lesson_jpa.ShowTablesInfo(ShowTablesInfo.java:29) | gettin info for Products | 
+| 2019-02-28 17:55:05 | DEBUG | at lesson_jpa.ShowTablesInfo(ShowTablesInfo.java:39) | find succeded | 
+| 2019-02-28 19:49:20 | DEBUG | at logging.LoggerProviders(LoggerProviders.java:158) | Logging Provider: org.jboss.logging.Log4j2LoggerProvider | 
+| 2019-02-28 19:49:21 | DEBUG | at lesson_jpa.ShowTablesInfo(ShowTablesInfo.java:31) | gettin info for Products | 
+| 2019-02-28 19:49:21 | DEBUG | at lesson_jpa.ShowTablesInfo(ShowTablesInfo.java:41) | find succeded | 
+| 2019-02-28 19:49:21 | DEBUG | at lesson_jpa.OrderDaoImpl(OrderDaoImpl.java:104) | getting all Order instance | 
+| 2019-02-28 19:49:54 | DEBUG | at logging.LoggerProviders(LoggerProviders.java:158) | Logging Provider: org.jboss.logging.Log4j2LoggerProvider | 
+| 2019-02-28 19:49:55 | DEBUG | at lesson_jpa.ShowTablesInfo(ShowTablesInfo.java:31) | gettin info for Products | 
+| 2019-02-28 19:49:55 | DEBUG | at lesson_jpa.ShowTablesInfo(ShowTablesInfo.java:41) | find succeded | 
+| 2019-02-28 19:49:55 | DEBUG | at lesson_jpa.OrderDaoImpl(OrderDaoImpl.java:104) | getting all Order instance | 
+| 2019-02-28 19:51:56 | DEBUG | at logging.LoggerProviders(LoggerProviders.java:158) | Logging Provider: org.jboss.logging.Log4j2LoggerProvider | 
+| 2019-02-28 19:51:57 | DEBUG | at lesson_jpa.ShowTablesInfo(ShowTablesInfo.java:31) | gettin info for Products | 
+| 2019-02-28 19:51:57 | DEBUG | at lesson_jpa.ShowTablesInfo(ShowTablesInfo.java:41) | find succeded | 
+| 2019-02-28 19:51:57 | DEBUG | at lesson_jpa.OrderDaoImpl(OrderDaoImpl.java:104) | getting all Order instance | 
+| 2019-02-28 19:53:43 | DEBUG | at logging.LoggerProviders(LoggerProviders.java:158) | Logging Provider: org.jboss.logging.Log4j2LoggerProvider | 
+| 2019-02-28 19:53:43 | DEBUG | at lesson_jpa.ShowTablesInfo(ShowTablesInfo.java:31) | gettin info for Products | 
+| 2019-02-28 19:53:44 | DEBUG | at lesson_jpa.ShowTablesInfo(ShowTablesInfo.java:41) | find succeded | 
+| 2019-02-28 19:53:44 | DEBUG | at lesson_jpa.OrderDaoImpl(OrderDaoImpl.java:104) | getting all Order instance | 
+| 2019-02-28 19:54:09 | DEBUG | at logging.LoggerProviders(LoggerProviders.java:158) | Logging Provider: org.jboss.logging.Log4j2LoggerProvider | 
+| 2019-02-28 19:54:10 | DEBUG | at lesson_jpa.ShowTablesInfo(ShowTablesInfo.java:31) | gettin info for Products | 
+| 2019-02-28 19:54:10 | DEBUG | at lesson_jpa.ShowTablesInfo(ShowTablesInfo.java:41) | find succeded | 
+| 2019-02-28 19:54:10 | DEBUG | at lesson_jpa.OrderDaoImpl(OrderDaoImpl.java:104) | getting all Order instance | 
+| 2019-02-28 19:54:16 | DEBUG | at logging.LoggerProviders(LoggerProviders.java:158) | Logging Provider: org.jboss.logging.Log4j2LoggerProvider | 
+| 2019-02-28 19:54:17 | DEBUG | at lesson_jpa.ShowTablesInfo(ShowTablesInfo.java:31) | gettin info for Products | 
+| 2019-02-28 19:54:17 | DEBUG | at lesson_jpa.ShowTablesInfo(ShowTablesInfo.java:41) | find succeded | 
+| 2019-02-28 19:54:17 | DEBUG | at lesson_jpa.OrderDaoImpl(OrderDaoImpl.java:104) | getting all Order instance | 
+| 2019-02-28 19:55:58 | DEBUG | at logging.LoggerProviders(LoggerProviders.java:158) | Logging Provider: org.jboss.logging.Log4j2LoggerProvider | 
+| 2019-02-28 19:55:58 | DEBUG | at lesson_jpa.ShowTablesInfo(ShowTablesInfo.java:31) | gettin info for Products | 
+| 2019-02-28 19:55:59 | DEBUG | at lesson_jpa.ShowTablesInfo(ShowTablesInfo.java:41) | find succeded | 
+| 2019-02-28 19:55:59 | DEBUG | at lesson_jpa.OrderDaoImpl(OrderDaoImpl.java:104) | getting all Order instance | 
+| 2019-02-28 19:55:59 | ERROR | at lesson_jpa.OrderDaoImpl(OrderDaoImpl.java:115) | getting failed | 
+java.lang.IllegalArgumentException: Negative MaxResult is not allowed.
+	at org.eclipse.persistence.internal.jpa.QueryImpl.setMaxResultsInternal(QueryImpl.java:882) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at org.eclipse.persistence.internal.jpa.QueryImpl.setMaxResults(QueryImpl.java:847) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at org.eclipse.persistence.internal.jpa.EJBQueryImpl.setMaxResults(EJBQueryImpl.java:437) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at org.eclipse.persistence.internal.jpa.EJBQueryImpl.setMaxResults(EJBQueryImpl.java:1) ~[eclipselink-2.7.4.jar:2.7.4.v20190115-ad5b7c6b2a]
+	at lesson_jpa.OrderDaoImpl.getAllOrders(OrderDaoImpl.java:112) [classes/:?]
+	at lesson_jpa.ShowTablesInfo.main(ShowTablesInfo.java:27) [classes/:?]
+| 2019-02-28 19:56:12 | DEBUG | at logging.LoggerProviders(LoggerProviders.java:158) | Logging Provider: org.jboss.logging.Log4j2LoggerProvider | 
+| 2019-02-28 19:56:13 | DEBUG | at lesson_jpa.ShowTablesInfo(ShowTablesInfo.java:31) | gettin info for Products | 
+| 2019-02-28 19:56:13 | DEBUG | at lesson_jpa.ShowTablesInfo(ShowTablesInfo.java:41) | find succeded | 
+| 2019-02-28 19:56:13 | DEBUG | at lesson_jpa.OrderDaoImpl(OrderDaoImpl.java:104) | getting all Order instance | 
+| 2019-02-28 19:56:20 | DEBUG | at logging.LoggerProviders(LoggerProviders.java:158) | Logging Provider: org.jboss.logging.Log4j2LoggerProvider | 
+| 2019-02-28 19:56:21 | DEBUG | at lesson_jpa.ShowTablesInfo(ShowTablesInfo.java:31) | gettin info for Products | 
+| 2019-02-28 19:56:21 | DEBUG | at lesson_jpa.ShowTablesInfo(ShowTablesInfo.java:41) | find succeded | 
+| 2019-02-28 19:56:21 | DEBUG | at lesson_jpa.OrderDaoImpl(OrderDaoImpl.java:104) | getting all Order instance | 
+| 2019-02-28 19:56:30 | DEBUG | at logging.LoggerProviders(LoggerProviders.java:158) | Logging Provider: org.jboss.logging.Log4j2LoggerProvider | 
+| 2019-02-28 19:56:31 | DEBUG | at lesson_jpa.ShowTablesInfo(ShowTablesInfo.java:31) | gettin info for Products | 
+| 2019-02-28 19:56:31 | DEBUG | at lesson_jpa.ShowTablesInfo(ShowTablesInfo.java:41) | find succeded | 
+| 2019-02-28 19:56:31 | DEBUG | at lesson_jpa.OrderDaoImpl(OrderDaoImpl.java:104) | getting all Order instance | 
+| 2019-02-28 19:56:38 | DEBUG | at logging.LoggerProviders(LoggerProviders.java:158) | Logging Provider: org.jboss.logging.Log4j2LoggerProvider | 
+| 2019-02-28 19:56:39 | DEBUG | at lesson_jpa.ShowTablesInfo(ShowTablesInfo.java:31) | gettin info for Products | 
+| 2019-02-28 19:56:39 | DEBUG | at lesson_jpa.ShowTablesInfo(ShowTablesInfo.java:41) | find succeded | 
+| 2019-02-28 19:56:39 | DEBUG | at lesson_jpa.OrderDaoImpl(OrderDaoImpl.java:104) | getting all Order instance | 
+| 2019-02-28 19:56:51 | DEBUG | at logging.LoggerProviders(LoggerProviders.java:158) | Logging Provider: org.jboss.logging.Log4j2LoggerProvider | 
+| 2019-02-28 19:56:52 | DEBUG | at lesson_jpa.ShowTablesInfo(ShowTablesInfo.java:31) | gettin info for Products | 
+| 2019-02-28 19:56:52 | DEBUG | at lesson_jpa.ShowTablesInfo(ShowTablesInfo.java:41) | find succeded | 
+| 2019-02-28 19:56:52 | DEBUG | at lesson_jpa.OrderDaoImpl(OrderDaoImpl.java:104) | getting all Order instance | 
+| 2019-02-28 19:57:14 | DEBUG | at logging.LoggerProviders(LoggerProviders.java:158) | Logging Provider: org.jboss.logging.Log4j2LoggerProvider | 
+| 2019-02-28 19:57:15 | DEBUG | at lesson_jpa.ShowTablesInfo(ShowTablesInfo.java:31) | gettin info for Products | 
+| 2019-02-28 19:57:15 | DEBUG | at lesson_jpa.ShowTablesInfo(ShowTablesInfo.java:41) | find succeded | 
+| 2019-02-28 19:57:15 | DEBUG | at lesson_jpa.OrderDaoImpl(OrderDaoImpl.java:104) | getting all Order instance | 
+| 2019-02-28 19:57:54 | DEBUG | at logging.LoggerProviders(LoggerProviders.java:158) | Logging Provider: org.jboss.logging.Log4j2LoggerProvider | 
+| 2019-02-28 19:57:55 | DEBUG | at lesson_jpa.ShowTablesInfo(ShowTablesInfo.java:31) | gettin info for Products | 
+| 2019-02-28 19:57:55 | DEBUG | at lesson_jpa.ShowTablesInfo(ShowTablesInfo.java:41) | find succeded | 
+| 2019-02-28 19:57:55 | DEBUG | at lesson_jpa.OrderDaoImpl(OrderDaoImpl.java:104) | getting all Order instance | 
+| 2019-02-28 19:58:29 | DEBUG | at logging.LoggerProviders(LoggerProviders.java:158) | Logging Provider: org.jboss.logging.Log4j2LoggerProvider | 
+| 2019-02-28 19:58:30 | DEBUG | at lesson_jpa.ShowTablesInfo(ShowTablesInfo.java:31) | gettin info for Products | 
+| 2019-02-28 19:58:30 | DEBUG | at lesson_jpa.ShowTablesInfo(ShowTablesInfo.java:41) | find succeded | 
+| 2019-02-28 19:58:30 | DEBUG | at lesson_jpa.OrderDaoImpl(OrderDaoImpl.java:104) | getting all Order instance | 
