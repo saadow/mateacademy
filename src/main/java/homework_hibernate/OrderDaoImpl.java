@@ -118,9 +118,7 @@ public class OrderDaoImpl implements OrderDao {
 		try {
 			sessionObj = buildSessionFactory().openSession();
 			sessionObj.beginTransaction();
-			Order stuObj = sessionObj.get(Order.class, order.getOrderNum());
-			stuObj.setAmount(order.getAmount());
-			stuObj.setQty(order.getQty());
+			sessionObj.update(order);
 			sessionObj.getTransaction().commit();
 			result = true;
 			LOG.info("\nUpdate Success\n");
