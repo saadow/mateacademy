@@ -2,6 +2,7 @@ package homework_hibernate;
 
 import java.io.File;
 import java.math.BigDecimal;
+import java.util.HashSet;
 import java.util.Locale;
 import java.util.Set;
 
@@ -68,26 +69,95 @@ public class OrderDaoImpl implements OrderDao {
 
 	@Override
 	public Set<Order> getAllOrders() {
-		// TODO Auto-generated method stub
-		return null;
+		Set<Order> orders = new HashSet<>(0);
+		try {
+			sessionObj = buildSessionFactory().openSession();
+			sessionObj.beginTransaction();
+			orders = new HashSet<>(sessionObj.createQuery("FROM Order").list());
+		} catch (Exception sqlException) {
+			if (null != sessionObj.getTransaction()) {
+				LOG.warn("\nRollBack\n");
+				sessionObj.getTransaction().rollback();
+			}
+			sqlException.printStackTrace();
+		} finally {
+			if (sessionObj != null) {
+				sessionObj.close();
+			}
+		}
+		return orders;
 	}
 
 	@Override
 	public boolean insertOrder(Order order) {
-		// TODO Auto-generated method stub
-		return false;
+		boolean result = false;
+		try {
+			sessionObj = buildSessionFactory().openSession();
+			sessionObj.beginTransaction();
+			sessionObj.save(order);
+			sessionObj.getTransaction().commit();
+			result = true;
+			LOG.info("\nInsert Success!\n");
+		} catch (Exception sqlException) {
+			if (null != sessionObj.getTransaction()) {
+				LOG.info("\nInsert RollBack\n");
+				sessionObj.getTransaction().rollback();
+			}
+			sqlException.printStackTrace();
+		} finally {
+			if (sessionObj != null) {
+				sessionObj.close();
+			}
+		}
+		return result;
 	}
 
 	@Override
 	public boolean updateOrder(Order order) {
-		// TODO Auto-generated method stub
-		return false;
+		boolean result = false;
+		try {
+			sessionObj = buildSessionFactory().openSession();
+			sessionObj.beginTransaction();
+			sessionObj.update(order);
+			sessionObj.getTransaction().commit();
+			result = true;
+			LOG.info("\nUpdate Success\n");
+		} catch (Exception sqlException) {
+			if (null != sessionObj.getTransaction()) {
+				LOG.info("\nUpdate RollBack\n");
+				sessionObj.getTransaction().rollback();
+			}
+			sqlException.printStackTrace();
+		} finally {
+			if (sessionObj != null) {
+				sessionObj.close();
+			}
+		}
+		return result;
 	}
 
 	@Override
 	public boolean deleteOrder(BigDecimal id) {
-		// TODO Auto-generated method stub
-		return false;
+		boolean result = false;
+		try {
+			sessionObj = buildSessionFactory().openSession();
+			sessionObj.beginTransaction();
+			sessionObj.delete(sessionObj.get(Order.class, id));
+			sessionObj.getTransaction().commit();
+			result = true;
+			LOG.info("\nDelete Success\n", id);
+		} catch (Exception sqlException) {
+			if (null != sessionObj.getTransaction()) {
+				LOG.info("\nDelete RollBack\n");
+				sessionObj.getTransaction().rollback();
+			}
+			sqlException.printStackTrace();
+		} finally {
+			if (sessionObj != null) {
+				sessionObj.close();
+			}
+		}
+		return result;
 	}
 
 }
