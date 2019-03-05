@@ -4,7 +4,7 @@ import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 
-import com.sun.jersey.api.container.grizzly.GrizzlyWebContainerFactory;
+//import com.sun.jersey.api.container.grizzly.GrizzlyWebContainerFactory;
 
 public class MainGrizzlyJerseyStart {
 	public static void main(String[] args) throws IOException {
@@ -16,7 +16,7 @@ public class MainGrizzlyJerseyStart {
 		initParams.put("com.sun.jersey.api.json.POJOMappingFeature", "true");
 
 		System.out.println("Starting grizzly...");
-		GrizzlyWebContainerFactory.create(baseUri, initParams);
+		//GrizzlyWebContainerFactory.create(baseUri, initParams);
 		System.out
 				.println(String.format("Jersey started with WADL available at %sapplication.wadl.", baseUri, baseUri));
 	}
